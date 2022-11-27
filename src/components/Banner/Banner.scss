@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.banner-container {
+    height: 700px;
+    background-color: #1A1B23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.greating-container {
+    font-size: 25px;
+    color: #fff;
+}
+
+.name-container {
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    font-size: 33px;
+    --tw-text-opacity: 1;
+    color: $my-blue;
+}
+
+.area-container {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}

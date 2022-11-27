@@ -1,0 +1,18 @@
+@import '../../variables';
+
+.brand-container {
+    font-size: 14px;
+    display: flex;
+    gap: 3px;
+}
+
+.brand-name {
+    // --tw-text-opacity: 1;
+    // color: $my-blue;
+    color: #fff;
+}
+
+.brand-lastname {
+    --tw-text-opacity: 1;
+    color: $my-blue;
+}
