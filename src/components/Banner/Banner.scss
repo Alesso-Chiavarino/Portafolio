@@ -14,18 +14,20 @@
 .greating-container {
     font-size: 25px;
     color: #fff;
+    font-family: mark-pro-heavy;
 }
 
 .name-container {
     margin-bottom: 15px;
     letter-spacing: -1px;
     font-size: 33px;
+    font-family: mark-pro-black;
     --tw-text-opacity: 1;
     color: $my-blue;
 }
 
 .area-container {
-    font-weight: bold;
+    font-family: mark-pro-heavy;
     font-size: 30px;
     color: #fff;
 }

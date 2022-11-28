@@ -1,0 +1,64 @@
+.learning {
+    margin-top: 70px;
+    background-image: url('./img/wave.svg');
+    background-position: center;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
+    color: rgb(212, 212, 212);
+    .learning-left-side {
+        font-weight: 500;
+        width: 50%;
+        p {
+            margin-bottom: 30px;
+        }
+        .learning-github-btn {
+            color: #000 !important;
+            padding: 10px 10px;
+            font-weight: 500;
+            background-color: #D6D6D6;
+            // border: 1px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-family: mark-pro-medium;
+            &:hover {
+                background-color: #d6d6d6e3;
+            }
+        }
+    }
+    .learning-right-side {
+        font-weight: bold;
+        color: #a5a5a5;
+        font-size: 20px;
+        width: 30%;
+        p {
+            font-family: mark-pro-heavy;
+        }
+        .learning-icons-container {
+            display: flex;
+            gap: 20px;
+            .learning-icon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100px;
+                height: 110px;
+                background-color: #1A1B23;
+                border-radius: 10px;
+                margin-top: 20px;
+                .learning-icon {
+                    width: 50px;
+                }
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@
     // background-color: #0026ff;
     margin: 0 auto;
     width: 80%;
-    margin-bottom: 500px;
+    margin-bottom: 100px;
     // padding: 40px;
     // height: 700px;
     .areas {
@@ -15,6 +15,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        span {
+            font-family: mark-pro-heavy;
+        }
         .front-end {
             width: 50%;
             display: flex;
@@ -40,6 +43,7 @@
     color: #fff;
     margin-bottom: 50px;
     text-align: center;  
+    font-family: mark-pro-heavy;
     // margin: auto;     
 }
 

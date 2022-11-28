@@ -5,6 +5,46 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: mark-pro-regular;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     background-color: #1A1B23;
 }
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: #1A1B23;
+    border-left: 0.2992px solid rgb(70, 70, 70);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #21232E;
+    border-radius: 0.625em;
+}
+
+@font-face {
+    font-family: mark-pro-black;
+    src: url('../src/assets/fonts/MarkPro-Black.otf');
+}
+
+@font-face {
+    font-family: mark-pro-heavy;
+    src: url('../src/assets/fonts/Mark.Pro.Heavy.otf');
+}
+
+@font-face {
+    font-family: mark-pro-bold;
+    src: url('../src/assets/fonts/Mark.Pro.Bold.otf');
+}
+
+@font-face {
+    font-family: mark-pro-regular;
+    src: url('../src/assets/fonts/MarkPro-Regular.otf');
+}
+
+@font-face {
+    font-family: mark-pro-medium;
+    src: url('../src/assets/fonts/MarkPro-Medium.ttf');
+}
+
+

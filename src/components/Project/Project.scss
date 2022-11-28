@@ -1,0 +1,62 @@
+@font-face {
+    font-family: mark-pro-black;
+    src: url('../../assets/fonts/MarkPro-Black.otf');
+}
+
+.project {
+    box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+    height: 450px;
+    gap: 20px;
+    background-color: #21232E;
+    border-radius: 10px;
+    .project-img {
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 350px;
+        height: 200px;
+    }
+    .project-info1 {
+        // margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            color: #fff;
+            font-size: 22px;
+            font-family: mark-pro-black;
+        }
+        .project-icon-links {
+            display: flex;
+            gap: 10px;
+            .icon-links {
+                display: flex;
+                padding: 5px;
+                border: 1px solid rgba(255, 255, 255, 0.267);
+                border-radius: 5px;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.075);
+                }
+            }
+        }
+    }
+    .project-info2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .tech-used {
+            border: 1px solid #679CFF;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 3px;
+            color: #679CFF;
+        }
+    }
+    .project-info3 {
+        color: #CED4D4;
+    }
+}

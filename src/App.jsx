@@ -2,7 +2,9 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
 import CertificatesContainer from './components/CertificatesContainer/CertificatesContainer'
+import Contact from './components/Contact/Contact'
 import Navbar from './components/Navbar/Navbar'
+import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 
 const App = () => {
@@ -12,6 +14,8 @@ const App = () => {
       <Banner/>
       <CertificatesContainer/>
       <Skills/>
+      <Projects/>
+      <Contact/>
     </>
   )
 }

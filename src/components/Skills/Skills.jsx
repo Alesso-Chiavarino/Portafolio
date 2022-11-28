@@ -1,3 +1,4 @@
+import Learning from '../Learning/Learning';
 import TecnologiesCarousel from '../TecnologiesCarousel/TecnologiesCarousel';
 import './Skills.scss';
 
@@ -83,6 +84,7 @@ const Skills = () => {
                     <TecnologiesCarousel backTechnologies={backTechnologies} className="tecnologies-carousel"/>
                 </div>
             </div>
+            <Learning/>
         </section>
     </>
   )

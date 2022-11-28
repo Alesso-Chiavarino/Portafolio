@@ -11,11 +11,11 @@ const Navbar = () => {
             <Brand/>
             <ListContainer/>
             <div className='icons-container'>
-                <div className='icon-container'>
-                    <BsSunFill color='#fff'/>
+                <div className="icon-container-message">
+                    <SiGooglemessages/>
                 </div>
-                <div className="icon-container">
-                    <SiGooglemessages color=''/>
+                <div className='icon-container-light'>
+                    <BsSunFill/>
                 </div>
                 {/* hola */}
             </div>

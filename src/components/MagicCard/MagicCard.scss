@@ -1,0 +1,147 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 600px;
+    --card-width: 70%;
+  }
+.que {
+    display: flex;
+    justify-content: center;
+    // margin: 0 auto;
+}
+  .card {
+    margin-bottom: 200px;
+    // z-index: ;
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    font-family: cursive;
+    padding: 40px;
+  }
+  
+  .card::before {
+    content: "";
+    
+    width: 101%;
+    height: 101%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+    //   top: -1%;
+    //   left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    
+    content: "";
+    // top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+
+  .dale {
+    // z-index: 4545445;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+  .contact-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    width: 35%;
+    background-color: #21232E;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
+    // width: 300px;
+    // height: 300px;
+    .contact-img {
+        margin: 0 auto;
+        width: 200px;
+        position: relative;
+        bottom: 100px;
+    }
+    h3 {
+        font-family: mark-pro-heavy;
+        margin-top: -70px;
+        margin-bottom: 20px;
+        // color: #fff;
+        font-size: 20px;
+        text-align: left;
+        color: #c2c2c2;
+    }
+    .github, .linkedin, .mail, .whatsapp {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        .network {
+            font-family: mark-pro-bold;
+            width: 90%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: #838383;
+            a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+        .contact-icon {
+            color: #83AEFB !important;
+            font-size: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.315);
+            border-radius: 5px;
+            padding: 6px;
+            width: 10%;
+        }
+    }
+  }
+
+  .contact-form {
+    // background-color: #3c67e3;
+    width: 65%;
+  }

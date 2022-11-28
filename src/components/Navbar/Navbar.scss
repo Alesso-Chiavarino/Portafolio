@@ -14,6 +14,7 @@
     background-color: #21232E;
     position: fixed;
     margin-top: 20px;
+    z-index: 500;
 }
 
 .icons-container {
@@ -21,7 +22,7 @@
     gap: 10px;
 }
 
-.icon-container {
+.icon-container-light {
     cursor: pointer;
     color: #fff;
     display: flex;
@@ -30,5 +31,13 @@
     background-color: #303341;
     &:hover {
         background-color: #343744;
+    }
+}
+
+.icon-container-message {
+    @extend .icon-container-light;
+    background-color: #679CFF;
+    &:hover {
+        background-color: #679cffd0;
     }
 }
