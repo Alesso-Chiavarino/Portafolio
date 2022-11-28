@@ -1,0 +1,49 @@
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #0026ff;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 500px;
+    // padding: 40px;
+    // height: 700px;
+    .areas {
+        width: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .front-end {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 20px;
+            font-weight: bold;
+            color: #c2c2c2;
+            .area-span {
+                margin-bottom: 20px;
+            }
+        }
+        .back-end {
+            @extend .front-end;
+        }
+    }
+}
+
+.section-title {
+    margin-top: 40px;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 50px;
+    text-align: center;  
+    // margin: auto;     
+}
+
+.tecnologies-carousel {
+    color: #fff;
+    max-width: 50%;
+}

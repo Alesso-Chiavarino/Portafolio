@@ -10,8 +10,9 @@
     border-radius: 10px;
     padding: 20px;
     gap: 20px;
-    .certificate-icon {
+    .certificate-academy-icon {
         width: 50px;
+        border-radius: 50%;
     }
     .certificate-course {
         font-size: 18px;
@@ -44,6 +45,7 @@
         // font-weight: normal;
     }
     .certificate-link {
+        font-size: 17px;
         font-weight: bold;
         color: #fff;
         text-decoration: none;
@@ -51,5 +53,8 @@
         padding: 5px 10px;
         background-color: #679cff;
         // border: 1px solid #83AEFB;
+        .certificate-icon {
+            color: "#fff";
+        }
     }
 }

@@ -1,16 +1,18 @@
 import './Certificate.scss';
+import {TbFileCertificate} from 'react-icons/tb'
 
-const Certificate = ({img, course, academy, date, description}) => {
+const Certificate = ({img, course, academy, date, description, certificate}) => {
   return (
     <article className='certificate'>
-        <img className='certificate-icon' src={img} alt={academy} />
+        <img className='certificate-academy-icon' src={img} alt={academy} />
         <span className='certificate-course'>{course}</span>
         <div className='certificate-info'>
             <span className='certificate-info-academy-btn'>{academy}</span>
             <span className='certificate-info-date-btn' >{date}</span>
         </div>
         <p className='cerficate-description'>{description}</p>
-        <a className='certificate-link' href="#">Certificate</a>
+        {academy === "Blas Pascal"? <a className='certificate-link' href={certificate}>In Process</a> : <a className='certificate-link' target="_blank" href={certificate}> <span><TbFileCertificate className='certificate-icon'/></span> Certificate</a>}
+        
     </article>
   )
 }
