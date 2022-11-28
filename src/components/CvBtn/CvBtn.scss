@@ -1,0 +1,10 @@
+.cv-link {
+    text-decoration: none;
+    color: #83AEFB;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid #83AEFB;
+    &:hover {
+        background-color: #83adfb1c;
+    }
+}

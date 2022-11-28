@@ -1,4 +1,5 @@
 import TypeWriter from '../TypeWriter/TypeWriter';
+import CvBtn from '../CvBtn/CvBtn';
 import './Banner.scss';
 
 const Banner = () => {
@@ -12,6 +13,9 @@ const Banner = () => {
         </div>
         <div className='area-container'>
             <TypeWriter/>
+        </div>
+        <div className="cvc-btn-container">
+          <CvBtn/>
         </div>
     </div>
   )

@@ -1,6 +1,9 @@
 @import '../../variables';
 
 .brand-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
     display: flex;
     gap: 3px;
@@ -10,9 +13,15 @@
     // --tw-text-opacity: 1;
     // color: $my-blue;
     color: #fff;
+    // font-family: mark;
 }
 
 .brand-lastname {
     --tw-text-opacity: 1;
     color: $my-blue;
+}
+
+.portafolio-icon {
+    width: 35px;
+    margin-right: 5px;
 }
