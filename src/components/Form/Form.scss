@@ -1,0 +1,68 @@
+.contact-form {
+    label {
+        color: #fff;
+    }
+    .form-name, .form-email {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 16px;
+        font-family: mark-pro-heavy;
+        input {
+            margin-top: 10px;
+            background-color: transparent !important;
+            box-shadow: none;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.493);
+            padding: 10px 15px;
+            outline: none;
+            font-size: 14px;
+            color: rgb(204, 204, 204);
+            &::placeholder {
+                font-family: mark-pro-heavy;
+                color: rgba(255, 255, 255, 0.493);
+            }
+        }
+    }
+    .form-message {
+        label {
+            @extend .form-name;
+        }
+        textarea {
+            padding: 10px 15px;
+            color: rgb(204, 204, 204);
+            font-size: 14px;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            border-radius: 5px;
+            min-height: 100px;
+            outline: none;
+            height: 100px;
+            max-height: 150px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.493);
+            &::placeholder {
+                font-family: mark-pro-heavy;
+                color: rgba(255, 255, 255, 0.493);
+            }
+        }
+    }
+    .btn-submit {
+        cursor: pointer;
+        gap: 5px;
+        margin-top: 20px;
+        display: flex;
+        color: #fff;
+        background-color: #4f8cff;
+        font-size: 16px;
+        border: none ;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-family: mark-pro-heavy;
+        &:hover {
+            background-color: #83AEFB;
+        }
+    }
+}

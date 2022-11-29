@@ -7,12 +7,12 @@ import Form from '../Form/Form';
 
 const MagicCard = () => {
     return (
-        <div className='que'>
+        <div className='card-container'>
             <article className='card'>
                 <div className="contact-info">
                     <img className='contact-img' src="./img/contact-vector.png" alt="" />
                     <h3>Social Networks</h3>
-                    <div className="github">
+                    <div className="card-github">
                         <AiFillGithub className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Github:</span>
@@ -33,7 +33,7 @@ const MagicCard = () => {
                             <a href="">gmail.com/alessochiavarino</a>
                         </div>
                     </div>
-                    <div className="whatsapp">
+                    <div className="card-whatsapp">
                         <BsWhatsapp className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Whatsapp:</span>
@@ -44,7 +44,8 @@ const MagicCard = () => {
 
                 </div>
                 <div className="contact-form">
-                    {/* <Form/> */}
+                    <h3>Send me a message</h3>
+                    <Form/>
                 </div>
             </article>
         </div>
