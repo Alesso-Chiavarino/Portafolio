@@ -127,9 +127,12 @@
       font-size: 14px;
       color: #838383;
 
-      a {
-        color: #ffffff;
+      .link-network {
+        color: #fff;
         text-decoration: none;
+        &:hover {
+          color: #83AEFB;
+        }
       }
     }
 

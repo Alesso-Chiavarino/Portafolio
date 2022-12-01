@@ -5,7 +5,9 @@ import {IoMdRocket} from 'react-icons/io'
 const Project = ({name, tech, description, img, git, deploy}) => {
   return (
     <article className='project'>
-        <img className='project-img' src={img} alt={name} />
+        <div className="project-img-container">
+          <img className='project-img' src={img} alt={name} />
+        </div>
         <div className="project-info1">
             <h3>{name}</h3>
             <div className="project-icon-links">

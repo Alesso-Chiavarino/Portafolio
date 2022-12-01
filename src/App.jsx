@@ -7,18 +7,22 @@ import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
+import { useInView } from 'react-intersection-observer';
+import ObserverProvider from './context/ObserverContext'
 
 const App = () => {
+
+
   return (
-    <>
-      <Navbar/>
-      <Banner/>
-      <CertificatesContainer/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-    </>
+    <ObserverProvider>
+      <Navbar />
+      <Banner />
+      <CertificatesContainer />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </ObserverProvider>
   )
 }
 

@@ -10,6 +10,7 @@
         font-size: 16px;
         font-family: mark-pro-heavy;
         input {
+            font-family: mark-pro-medium;
             margin-top: 10px;
             background-color: transparent !important;
             box-shadow: none;
@@ -22,6 +23,11 @@
             &::placeholder {
                 font-family: mark-pro-heavy;
                 color: rgba(255, 255, 255, 0.493);
+            }
+            &:focus {
+                border: 1px solid #83AEFB;
+                transition: 0.3s all;
+                box-shadow: #83AEFB 0px 0px 3px 0px;
             }
         }
     }
@@ -39,6 +45,7 @@
             border-radius: 5px;
             min-height: 100px;
             outline: none;
+            font-family: mark-pro-medium;
             height: 100px;
             max-height: 150px;
             background-color: transparent;
@@ -46,6 +53,11 @@
             &::placeholder {
                 font-family: mark-pro-heavy;
                 color: rgba(255, 255, 255, 0.493);
+            }
+            &:focus {
+                border: 1px solid #83AEFB;
+                transition: 0.3s all;
+                box-shadow: #83AEFB 0px 0px 3px 0px;
             }
         }
     }

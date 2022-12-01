@@ -16,28 +16,28 @@ const MagicCard = () => {
                         <AiFillGithub className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Github:</span>
-                            <a href="">github.com/alesso-chiavarino</a>
+                            <a className='link-network' href="">github.com/alesso-chiavarino</a>
                         </div>
                     </div>
                     <div className="linkedin">
                         <FaLinkedinIn className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Linkedin:</span>
-                            <a href="">linkedin.com/alesso-chiavarino</a>
+                            <a className='link-network' href="">linkedin.com/alesso-chiavarino</a>
                         </div>
                     </div>
                     <div className="mail">
                         <SiGmail className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Mail:</span>
-                            <a href="">gmail.com/alessochiavarino</a>
+                            <a className='link-network' href="">gmail.com/alessochiavarino</a>
                         </div>
                     </div>
                     <div className="card-whatsapp">
                         <BsWhatsapp className='contact-icon' color='#fff' />
                         <div className="network">
                             <span>Whatsapp:</span>
-                            <a href="">+54 3513079987</a>
+                            <a className='link-network' href="">+54 3513079987</a>
                         </div>
                     </div>
                     

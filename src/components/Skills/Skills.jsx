@@ -1,6 +1,9 @@
 import Learning from '../Learning/Learning';
 import TecnologiesCarousel from '../TecnologiesCarousel/TecnologiesCarousel';
 import './Skills.scss';
+import { useInView } from 'react-intersection-observer';
+import { observerContext } from '../../context/ObserverContext';
+import { useContext, useEffect } from 'react';
 
 const Skills = () => {
 
@@ -70,24 +73,35 @@ const Skills = () => {
         },
     ]
 
-  return (
-    <>
-        <section className='skills-container'>
-            <h1 className='section-title'>My Skills</h1>
-            <div className="areas">
-                <div className="front-end">
-                    <span className='area-span'>Front End</span>
-                    <TecnologiesCarousel frontTechnologies={frontTechnologies} className="tecnologies-carousel"/>
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.5,
+    });
+
+    const { observerS } = useContext(observerContext);
+
+    useEffect(() => {
+        inView ? observerS(true) : observerS(false)
+    }, [inView])
+
+    return (
+        <>
+            <section className='skills-container' ref={ref} id="skills" >
+                <h1 className='section-title'>My Skills</h1>
+                <div className="areas">
+                    <div className="front-end">
+                        <span className='area-span'>Front End</span>
+                        <TecnologiesCarousel frontTechnologies={frontTechnologies} className="tecnologies-carousel" />
+                    </div>
+                    <div className="back-end">
+                        <span className='area-span'>Back End</span>
+                        <TecnologiesCarousel backTechnologies={backTechnologies} className="tecnologies-carousel" />
+                    </div>
                 </div>
-                <div className="back-end">
-                    <span className='area-span'>Back End</span>
-                    <TecnologiesCarousel backTechnologies={backTechnologies} className="tecnologies-carousel"/>
-                </div>
-            </div>
-            <Learning/>
-        </section>
-    </>
-  )
+                <Learning />
+            </section>
+        </>
+    )
 }
 
 export default Skills;

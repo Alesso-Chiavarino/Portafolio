@@ -1,0 +1,22 @@
+.nav-link-container {
+    display: flex;
+}
+
+.nav-link {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-family: mark-pro-heavy;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: #ffffff0e;
+        border-radius: 5px;
+    }
+}
+
+.nav-link-active {
+    @extend .nav-link;
+    background-color: #ffffff0e;
+    border-radius: 5px;
+}

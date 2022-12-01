@@ -1,9 +1,16 @@
 .certificates-container {
     background-color: #21232E;
-    // height: 350px;
     padding: 40px;
     margin-bottom: 100px;
     display: flex;
     justify-content: space-around;
     align-content: center;
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(3% - 40px) !important;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(3% - 40px) !important;
 }

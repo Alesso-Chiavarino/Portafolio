@@ -8,20 +8,28 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     width: 400px;
     padding: 30px;
     height: 450px;
     gap: 20px;
     background-color: #21232E;
     border-radius: 10px;
-    .project-img {
-        margin: 0 auto;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: 0.5s all;
+        transform: scale(1.02);
+    }
+    .project-img-container {
+        overflow: hidden;
         border-radius: 10px;
-        width: 350px;
-        height: 200px;
+        .project-img {
+            margin: 0 auto;
+            width: 350px;
+            height: 200px;
+        }
     }
     .project-info1 {
-        // margin-top: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;

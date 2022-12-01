@@ -1,4 +1,4 @@
-import ListContainer from '../Banner/ListContainer/ListContainer';
+import ListContainer from '../ListContainer/ListContainer';
 import Brand from '../Brand/Brand';
 import {BsSunFill} from 'react-icons/bs'
 import {SiGooglemessages} from 'react-icons/si'
@@ -17,7 +17,6 @@ const Navbar = () => {
                 <div className='icon-container-light'>
                     <BsSunFill/>
                 </div>
-                {/* hola */}
             </div>
         </div>
     </div>
