@@ -69,9 +69,6 @@ const CertificatesContainer = () => {
     };
 
     return (
-
-        <div className='ki-padre'>
-
             <Carousel
                 className="certificates-slider"
                 swipeable={true}
@@ -92,7 +89,6 @@ const CertificatesContainer = () => {
                     return <Certificate key={i} {...cert} />
                 })}
             </Carousel>
-        </div>
     )
 }
 

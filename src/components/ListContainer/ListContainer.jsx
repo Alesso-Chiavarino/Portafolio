@@ -29,8 +29,8 @@ const ListContainer = () => {
         <div className='nav-link-container'>
             {links.map((link, i) => {
                 return (
-                    observeSkills && link.name == "Skills" || observeAbout && link.name == "About me" || observeProjects && link.name == "Projects" ? <Link key={i} className='nav-link-active' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={500}> {link.name}
-                    </Link> : <Link key={i} className='nav-link' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={500}> {link.name}
+                    observeSkills && link.name == "Skills" || observeAbout && link.name == "About me" || observeProjects && link.name == "Projects" ? <Link key={i} className='nav-link-active' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
+                    </Link> : <Link key={i} className='nav-link' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
                     </Link>
                 )
             })}

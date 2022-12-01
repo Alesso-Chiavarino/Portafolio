@@ -1,24 +1,24 @@
 @import '../../variables';
 
-.brand-container {
+.brand-link {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
     display: flex;
     gap: 3px;
+    cursor: pointer;
 }
 
 .brand-name {
-    // --tw-text-opacity: 1;
-    // color: $my-blue;
     color: #fff;
-    // font-family: mark;
+    font-family: mark-pro-black;
 }
 
 .brand-lastname {
     --tw-text-opacity: 1;
     color: $my-blue;
+    @extend .brand-name;
 }
 
 .portafolio-icon {

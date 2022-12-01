@@ -3,7 +3,7 @@ import MagicCard from '../MagicCard/MagicCard'
 
 const Contact = () => {
   return (
-    <section className='contact'>
+    <section className='contact' id="contact" >
         <h1 className='section-title'>Contact Me</h1>
         <MagicCard/>
     </section>

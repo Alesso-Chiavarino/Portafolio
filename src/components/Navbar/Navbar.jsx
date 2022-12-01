@@ -3,6 +3,7 @@ import Brand from '../Brand/Brand';
 import {BsSunFill} from 'react-icons/bs'
 import {SiGooglemessages} from 'react-icons/si'
 import './Navbar.scss';
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   return (
@@ -11,9 +12,9 @@ const Navbar = () => {
             <Brand/>
             <ListContainer/>
             <div className='icons-container'>
-                <div className="icon-container-message">
+                <Link activeClass="active" to={"contact"} spy={true} smooth={true} offset={-170} duration={900} className="icon-container-message" >
                     <SiGooglemessages/>
-                </div>
+                </Link>
                 <div className='icon-container-light'>
                     <BsSunFill/>
                 </div>
