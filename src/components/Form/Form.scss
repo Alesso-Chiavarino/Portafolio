@@ -3,6 +3,7 @@
         color: #fff;
     }
     .form-name, .form-email {
+        position: relative;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -32,6 +33,7 @@
         }
     }
     .form-message {
+        position: relative;
         label {
             @extend .form-name;
         }
@@ -77,4 +79,31 @@
             background-color: #83AEFB;
         }
     }
+}
+
+.form-warning {
+    color: #fff;
+    background-color: #83AEFB;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 14px;
+    padding: 0 5px;
+    bottom: -25px;
+    right: 0px;
+}
+
+.form-warning2 {
+    font-family: mark-pro-heavy;
+    color: #fff;
+    background-color: #83AEFB;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 14px;
+    padding: 0 5px;
+    bottom: -20px;
+    right: 0px;
+}
+
+.d-none {
+    display: none;
 }
