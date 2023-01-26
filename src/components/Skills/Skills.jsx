@@ -71,6 +71,10 @@ const Skills = () => {
             img: "./img/skills/express.svg",
             name: "Express.js"
         },
+        {
+            img: "./img/skills/mysql.svg",
+            name: "MySQL"
+        },
     ]
 
     const { ref, inView, entry } = useInView({
