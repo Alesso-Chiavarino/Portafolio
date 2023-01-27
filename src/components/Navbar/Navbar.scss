@@ -8,18 +8,18 @@
     align-items: center;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 20px;
+    padding: 1.25em;
     border-radius: 10px;
     width: 70%;
     background-color: #21232E;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 1.25em;
     z-index: 500;
 }
 
 .icons-container {
     display: flex;
-    gap: 10px;
+    gap: 0.625em;
 }
 
 .icon-container-light {
@@ -27,7 +27,7 @@
     color: #fff;
     display: flex;
     border-radius: 5px;
-    padding: 10px;
+    padding: 0.625em;
     background-color: #303341;
     &:hover {
         background-color: #343744;

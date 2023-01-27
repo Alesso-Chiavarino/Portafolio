@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25em;
     a {
         text-decoration: none;
     }
@@ -16,14 +16,14 @@
     font-size: 8em;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.432);
-    border-radius: 5px;
-    width: 40px;
-    margin-top: 10px;
+    border-radius: 0.3125rem;
+    width: 2.5rem;
+    margin-top: 0.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    font-size: 30px;
+    height: 2.5rem;
+    font-size: 1.875em;
     animation: animate 3s linear infinite;
     text-shadow: 0 0 20px #0072ff, 0 0 100px #0072ff, 0 0 30px #0072ff,
         0 0 20px #0072ff;

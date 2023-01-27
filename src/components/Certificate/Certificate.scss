@@ -1,42 +1,42 @@
 .certificate {
-    margin-left: 30px;
+    margin-left: 1.875em;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
+    width: 25em;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.144);
-    border-radius: 10px;
-    padding: 20px;
-    gap: 20px;
+    border-radius: 0.625em;
+    padding: 1.25em;
+    gap: 1.25em;
     .certificate-academy-icon {
-        width: 50px;
+        width: 3.125em;
         border-radius: 50%;
         outline: 1px solid rgba(255, 255, 255, 0.144);
     }
     .certificate-course {
-        font-size: 18px;
+        font-size: 1.125em;
         font-family: mark-pro-heavy;
         // font-weight: bold;
     }
     .certificate-info {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 1.25em;
         .certificate-info-academy-btn {
             @extend .certificate-info-date-btn;
-            font-size: 14px !important;
+            font-size: 0.875em !important;
             // background-color: #3c76e0;
             background-color: #679cff;
             border: 0 !important;
             font-weight: bold;
         }
         .certificate-info-date-btn {
-            font-size: 12px;
-            width: 110px;
-            padding: 3px 0;
+            font-size: 0.75rem;
+            width: 6.875rem;
+            padding: 0.1875rem 0;
             // height: 30px;
             border-radius: 5px;
             // padding: 5px 10px;
@@ -44,16 +44,16 @@
         }
     }
     .cerficate-description {
-        font-size: 14px;
+        font-size: 0.875em;
         // font-weight: normal;
     }
     .certificate-link {
-        font-size: 17px;
+        font-size: 1.0625em;
         font-weight: bold;
         color: #fff;
         text-decoration: none;
-        border-radius: 5px;
-        padding: 5px 10px;
+        border-radius: 0.3125em;
+        padding: 0.3125em 0.625em;
         background-color: #679cff;
         .certificate-icon {
             color: "#fff";

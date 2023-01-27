@@ -5,14 +5,14 @@
 
 .project {
     box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
-    margin-top: 20px;
+    margin-top: 1.25em;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 400px;
-    padding: 30px;
-    height: 450px;
-    gap: 20px;
+    width: 25em;
+    padding: 1.875em;
+    height: 28.125em;
+    gap: 1.25em;
     background-color: #21232E;
     border-radius: 10px;
     &:hover {
@@ -25,8 +25,8 @@
         border-radius: 10px;
         .project-img {
             margin: 0 auto;
-            width: 350px;
-            height: 200px;
+            width: 21.875em;
+            height: 12.5em;
         }
     }
     .project-info1 {
@@ -35,15 +35,15 @@
         align-items: center;
         h3 {
             color: #fff;
-            font-size: 22px;
+            font-size: 1.375em;
             font-family: mark-pro-black;
         }
         .project-icon-links {
             display: flex;
-            gap: 10px;
+            gap: 0.625em;
             .icon-links {
                 display: flex;
-                padding: 5px;
+                padding: 0.3125em;
                 border: 1px solid rgba(255, 255, 255, 0.267);
                 border-radius: 5px;
                 &:hover {
@@ -55,12 +55,12 @@
     .project-info2 {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 0.625em;
         .tech-used {
             border: 1px solid #679CFF;
             border-radius: 5px;
-            font-size: 12px;
-            padding: 3px;
+            font-size: 0.75em;
+            padding: 0.1875em;
             color: #679CFF;
         }
     }

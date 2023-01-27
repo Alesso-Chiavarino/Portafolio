@@ -4,22 +4,22 @@
     }
     .form-name, .form-email {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 1.25em;
         display: flex;
         flex-direction: column;
         text-align: left;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: mark-pro-heavy;
         input {
             font-family: mark-pro-medium;
-            margin-top: 10px;
+            margin-top: 0.625em;
             background-color: transparent !important;
             box-shadow: none;
             border-radius: 5px;
             border: 1px solid rgba(255, 255, 255, 0.493);
-            padding: 10px 15px;
+            padding: 0.625rem 0.9375rem;
             outline: none;
-            font-size: 14px;
+            font-size: 0.875em;
             color: rgb(204, 204, 204);
             &::placeholder {
                 font-family: mark-pro-heavy;
@@ -38,18 +38,18 @@
             @extend .form-name;
         }
         textarea {
-            padding: 10px 15px;
+            padding: 0.625em 0.9375em;
             color: rgb(204, 204, 204);
-            font-size: 14px;
+            font-size: 0.875rem;
             width: 100%;
             min-width: 100%;
             max-width: 100%;
             border-radius: 5px;
-            min-height: 100px;
+            min-height: 6.25em;
             outline: none;
             font-family: mark-pro-medium;
-            height: 100px;
-            max-height: 150px;
+            height: 6.25em;
+            max-height: 9.375em;
             background-color: transparent;
             border: 1px solid rgba(255, 255, 255, 0.493);
             &::placeholder {
@@ -65,14 +65,14 @@
     }
     .btn-submit {
         cursor: pointer;
-        gap: 5px;
-        margin-top: 20px;
+        gap: 0.3125em;
+        margin-top: 1.25em;
         display: flex;
         color: #fff;
         background-color: #4f8cff;
-        font-size: 16px;
+        font-size: 1rem;
         border: none ;
-        padding: 12px 30px;
+        padding: 0.75rem 1.875rem;
         border-radius: 5px;
         font-family: mark-pro-heavy;
         &:hover {
@@ -84,11 +84,11 @@
 .form-warning {
     color: #fff;
     background-color: #83AEFB;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     position: absolute;
-    font-size: 14px;
-    padding: 0 5px;
-    bottom: -25px;
+    font-size: 0.875em;
+    padding: 0 0.3125em;
+    bottom: -1.5625em;
     right: 0px;
 }
 
@@ -96,11 +96,11 @@
     font-family: mark-pro-heavy;
     color: #fff;
     background-color: #83AEFB;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     position: absolute;
-    font-size: 14px;
-    padding: 0 5px;
-    bottom: -20px;
+    font-size: 0.875em;
+    padding: 0 0.3125em;
+    bottom: -1.25em;
     right: 0px;
 }
 

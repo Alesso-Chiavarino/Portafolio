@@ -1,5 +1,6 @@
 // import reactLogo from './assets/react.svg'
-import './App.css'
+import './App.css';
+import './responsive.scss';
 import Banner from './components/Banner/Banner'
 import CertificatesContainer from './components/CertificatesContainer/CertificatesContainer'
 import Contact from './components/Contact/Contact'
