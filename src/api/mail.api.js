@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const sendMailsRequest = async (data) => {
-    return await axios.post('http://localhost:4000/api/mails', data)
+    return await axios.post('https://portafolio-server-ruby.vercel.app/api/mails', data)
 }
