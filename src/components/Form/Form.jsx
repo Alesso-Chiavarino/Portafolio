@@ -1,7 +1,7 @@
 import './Form.scss';
 import { RiSendPlaneFill } from 'react-icons/ri'
-import emailjs from '@emailjs/browser';
 import { useState, useRef } from 'react';
+import { sendMailsRequest } from '../../api/mail.api';
 // import Loader from '../Loader/Loader';
 
 const Form = () => {
@@ -30,19 +30,28 @@ const Form = () => {
   const inputEmailRef = useRef()
   const inputMessageRef = useRef()
 
-  var templateParams = {
-    user_name: name,
-    user_email: email,
-    message: message,
-  };
+  const [loader, setLoader] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (nameVal && emailVal && messageVal) {
-      emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, templateParams, import.meta.env.VITE_PUBLIC_KEY);
-      setName('');
-      setEmail('');
-      setMessage('');
+    try {
+      if (nameVal && emailVal && messageVal) {
+        setLoader(true);
+        await sendMailsRequest({
+          name,
+          email,
+          message
+        })
+        setName('');
+        setEmail('');
+        setMessage('');
+      }
+    }
+    catch (error) {
+      console.log(error)
+    }
+    finally {
+      setLoader(false);
     }
   }
 
@@ -94,15 +103,14 @@ const Form = () => {
         </div>
         section
         <span className='loader-40'></span>
-      
+
         <div className="form-message">
           <label>Your Message</label>
           <span className='form-warning2 d-none' ref={messageRef} >Write a message</span>
           <textarea cols="30" rows="10" placeholder='Type a message...' name='message' onChange={handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref={inputMessageRef} ></textarea>
         </div>
-        <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>
+        {loader ? <button className='btn-submit dots-aling'>Submiting <span className='loader'></span></button> : <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
       </form>
-      {/* <Loader/> */}
     </>
   )
 

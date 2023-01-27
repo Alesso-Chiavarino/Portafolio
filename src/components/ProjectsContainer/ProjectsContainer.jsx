@@ -15,10 +15,10 @@ const ProjectsContainer = () => {
                     name: "React",
                 },
                 {
-                    name: "Firestore",
+                    name: "Bootstrap",
                 },
                 {
-                    name: "Bootstrap",
+                    name: "Firestore",
                 },
             ],
         },
@@ -89,17 +89,47 @@ const ProjectsContainer = () => {
                 {
                     name: "React",
                 },
+                {
+                    name: "Node.js",
+                },
+                {
+                    name: "Express.js",
+                },
+            ],
+        },
+        {
+            img: "./img/Our-Adventure-Book.png",
+            name: "Our Adventure Book",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            git: "https://github.com/Alesso-Chiavarino/Our-Adventure-Book",
+            deploy: "https://our-adventures-book.netlify.app",
+            tech: [
+                {
+                    name: "React",
+                },
+                {
+                    name: "Tailwind",
+                },
+                {
+                    name: "Node.js",
+                },
+                {
+                    name: "Express.js",
+                },
+                {
+                    name: "MongoDB",
+                },
             ],
         },
     ]
 
-  return (
-    <section className='projects-container'>
-        {projects.map((proj, i) => {
-            return <Project key={i} {...proj} />
-        })}
-    </section>
-  )
+    return (
+        <section className='projects-container'>
+            {projects.map((proj, i) => {
+                return <Project key={i} {...proj} />
+            })}
+        </section>
+    )
 }
 
 export default ProjectsContainer;

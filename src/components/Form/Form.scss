@@ -2,7 +2,9 @@
     label {
         color: #fff;
     }
-    .form-name, .form-email {
+
+    .form-name,
+    .form-email {
         position: relative;
         margin-bottom: 1.25em;
         display: flex;
@@ -10,6 +12,7 @@
         text-align: left;
         font-size: 1rem;
         font-family: mark-pro-heavy;
+
         input {
             font-family: mark-pro-medium;
             margin-top: 0.625em;
@@ -21,10 +24,12 @@
             outline: none;
             font-size: 0.875em;
             color: rgb(204, 204, 204);
+
             &::placeholder {
                 font-family: mark-pro-heavy;
                 color: rgba(255, 255, 255, 0.493);
             }
+
             &:focus {
                 border: 1px solid #83AEFB;
                 transition: 0.3s all;
@@ -32,11 +37,14 @@
             }
         }
     }
+
     .form-message {
         position: relative;
+
         label {
             @extend .form-name;
         }
+
         textarea {
             padding: 0.625em 0.9375em;
             color: rgb(204, 204, 204);
@@ -52,10 +60,12 @@
             max-height: 9.375em;
             background-color: transparent;
             border: 1px solid rgba(255, 255, 255, 0.493);
+
             &::placeholder {
                 font-family: mark-pro-heavy;
                 color: rgba(255, 255, 255, 0.493);
             }
+
             &:focus {
                 border: 1px solid #83AEFB;
                 transition: 0.3s all;
@@ -63,7 +73,9 @@
             }
         }
     }
+
     .btn-submit {
+        position: relative;
         cursor: pointer;
         gap: 0.3125em;
         margin-top: 1.25em;
@@ -71,10 +83,11 @@
         color: #fff;
         background-color: #4f8cff;
         font-size: 1rem;
-        border: none ;
+        border: none;
         padding: 0.75rem 1.875rem;
         border-radius: 5px;
         font-family: mark-pro-heavy;
+
         &:hover {
             background-color: #83AEFB;
         }
@@ -98,7 +111,7 @@
     background-color: #83AEFB;
     border-radius: 0.3125em;
     position: absolute;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     padding: 0 0.3125em;
     bottom: -1.25em;
     right: 0px;
@@ -106,4 +119,42 @@
 
 .d-none {
     display: none;
+}
+
+.loader {
+    margin-right: 1.875rem;
+    color: #FFF;
+    display: inline-block;
+    margin-left: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.loader::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    position: absolute;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+    0% {
+        box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 10px 0 white, 20px 0 white;
+    }
+}
+
+.dots-aling {
+    display: flex;
+    align-items: center;
 }
