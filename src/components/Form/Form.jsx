@@ -2,6 +2,9 @@ import './Form.scss';
 import { RiSendPlaneFill } from 'react-icons/ri'
 import { useState, useRef } from 'react';
 import { sendMailsRequest } from '../../api/mail.api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import Loader from '../Loader/Loader';
 
 const Form = () => {
@@ -52,6 +55,16 @@ const Form = () => {
     }
     finally {
       setLoader(false);
+      toast('Message sended successfully!', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   }
 
@@ -88,6 +101,7 @@ const Form = () => {
     }
   }
 
+
   return (
     <>
       <form className='contact-form' onSubmit={handleSubmit}>
@@ -111,6 +125,7 @@ const Form = () => {
         </div>
         {loader ? <button className='btn-submit dots-aling'>Submiting <span className='loader'></span></button> : <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
       </form>
+      <ToastContainer />
     </>
   )
 
