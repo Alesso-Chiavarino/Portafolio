@@ -12,8 +12,8 @@ const Learning = () => {
             <p>I'm currently learning</p>
             <div className='learning-icons-container'>
                 <div className="learning-icon-container">
-                    <img className='learning-icon' src="./img/skills/node.svg" alt="" />
-                    <span>Node.js</span>
+                    <img className='learning-icon' src="./img/skills/express.svg" alt="" />
+                    <span>Express.js</span>
                 </div>
                 <div className="learning-icon-container">
                     <img className='learning-icon' src="./img/skills/next-light.svg" alt="" />

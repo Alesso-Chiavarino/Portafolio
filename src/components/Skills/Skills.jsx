@@ -44,6 +44,10 @@ const Skills = () => {
             img: "./img/skills/tailwind.svg",
             name: "Tailwind",
         },
+        {
+            img: "./img/skills/astro.svg",
+            name: "Astro",
+        },
     ]
 
     const backTechnologies = [
@@ -74,6 +78,10 @@ const Skills = () => {
         {
             img: "./img/skills/mysql.svg",
             name: "MySQL"
+        },
+        {
+            img: "./img/skills/next-light.svg",
+            name: "Next.js"
         },
     ]
 
