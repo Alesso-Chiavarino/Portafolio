@@ -1,0 +1,23 @@
+.btn-scroll {
+    position: "fixed";
+    bottom: "20px";
+    right: "20px";
+    background-color: "blue";
+    color: "white";
+    border: "none";
+    border-radius: "5px";
+    padding: "10px 20px";
+    cursor: "pointer";
+}
+
+.btn-scroll-out {
+    position: "fixed";
+    bottom: "20px";
+    right: "20px";
+    background-color: "red";
+    color: "white";
+    border: "none";
+    border-radius: "5px";
+    padding: "10px 20px";
+    cursor: "pointer";
+}

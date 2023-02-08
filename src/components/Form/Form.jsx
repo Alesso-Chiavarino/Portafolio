@@ -2,7 +2,8 @@ import './Form.scss';
 import { RiSendPlaneFill } from 'react-icons/ri'
 import { useState, useRef } from 'react';
 import { sendMailsRequest } from '../../api/mail.api';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import Loader from '../Loader/Loader';
 
@@ -44,15 +45,44 @@ const Form = () => {
           email,
           message
         })
-        setName('');
-        setEmail('');
-        setMessage('');
+      } else {
+        if (!nameVal) {
+          nameRef.current.className = "form-warning"
+          // inputNameRef.current.focus();
+        }
+        if (!emailVal) {
+          emailRef.current.className = "form-warning"
+          // inputEmailRef.current.focus();
+        }
+        if (!messageVal) {
+          messageRef.current.className = "form-warning2"
+          // inputMessageRef.current.focus();
+        }
+        return;
       }
     }
     catch (error) {
-      console.log(error)
+      console.log(error);
     }
     finally {
+      if (nameVal && emailVal && messageVal) {
+        setName('');
+        setEmail('');
+        setMessage('');
+        setNameVal(false);
+        setEmailVal(false);
+        setMessageVal(false);
+        toast.success('Thank you for your message', {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
       setLoader(false);
     }
   }
@@ -113,6 +143,7 @@ const Form = () => {
           <textarea cols="30" rows="10" placeholder='Type a message...' name='message' onChange={handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref={inputMessageRef} ></textarea>
         </div>
         {loader ? <button className='btn-submit dots-aling'>Submiting <span className='loader'></span></button> : <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
+
       </form>
       <ToastContainer />
     </>

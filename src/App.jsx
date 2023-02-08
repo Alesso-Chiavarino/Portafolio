@@ -10,12 +10,14 @@ import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import { useInView } from 'react-intersection-observer';
 import ObserverProvider from './context/ObserverContext'
+import ScrollButton from './components/ScrollButton/ScrollButton'
 
 const App = () => {
 
 
   return (
     <ObserverProvider>
+      {/* <ScrollButton /> */}
       <Navbar />
       <Banner />
       <CertificatesContainer />
