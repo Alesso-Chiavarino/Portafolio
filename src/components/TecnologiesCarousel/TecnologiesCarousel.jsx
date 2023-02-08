@@ -5,51 +5,47 @@ import './TecnologiesCarousel.scss';
 
 const responsive = {
     superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 2000, min: 1600 },
+        breakpoint: { max: 3000, min: 1800 },
         items: 4
     },
     desktop: {
-        breakpoint: { max: 1600, min: 1024 },
+        breakpoint: { max: 1800, min: 991 },
         items: 3
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2
+        breakpoint: { max: 991, min: 576 },
+        items: 4
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1
+        breakpoint: { max: 576, min: 0 },
+        items: 2
     }
 };
 
-const TecnologiesCarousel = ({frontTechnologies, backTechnologies}) => {
+const TecnologiesCarousel = ({ frontTechnologies, backTechnologies }) => {
     return (
         <Carousel
-                className="technologies-slider"
-                swipeable={true}
-                arrows={false}
-                draggable={true}
-                showDots={false}
-                additionalTransfrom={0}
-                pauseOnHover
-                rewind={false}
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-                transitionDuration={500}
-                // containerClass="carousel-container"
-                // dotListClass="custom-dot-list-style"
-                // itemClass="carousel-item-padding-40-px"
-            >
-                        {frontTechnologies ? frontTechnologies.map(((tec, i) => {
-                            return <Technology key={i} {...tec} />
-                        })) : backTechnologies.map(((tec, i) => {
-                            return <Technology key={i} {...tec} />
-                        }))}
-            </Carousel>
+            className="technologies-slider"
+            swipeable={true}
+            arrows={false}
+            draggable={true}
+            showDots={false}
+            additionalTransfrom={0}
+            pauseOnHover
+            rewind={false}
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={2000}
+            keyBoardControl={true}
+            transitionDuration={500}
+        >
+            {frontTechnologies ? frontTechnologies.map(((tec, i) => {
+                return <Technology key={i} {...tec} />
+            })) : backTechnologies.map(((tec, i) => {
+                return <Technology key={i} {...tec} />
+            }))}
+        </Carousel>
     )
 }
 

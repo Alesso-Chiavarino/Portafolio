@@ -7,7 +7,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/TechStore.png",
             name: "TechStore App",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Ecommerce SPA for the React.js course.",
             git: "https://github.com/Alesso-Chiavarino/TechStore",
             deploy: "https://tttechstore.netlify.app",
             tech: [
@@ -25,7 +25,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/inmobiliaria-baudracco.png",
             name: "Inmobiliary Web",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Web page for a inmobiliary enterprise developed for the Web Development course.",
             git: "https://github.com/Alesso-Chiavarino/Alesso_Repo",
             deploy: "https://alesso-chiavarino.github.io/Alesso_Repo/",
             tech: [
@@ -43,7 +43,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/cafeteria.png",
             name: "Coffee Web",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Single page for a cofe developed with Jquery.",
             git: "https://github.com/Alesso-Chiavarino/Cafeteria",
             deploy: "https://cafealesso.000webhostapp.com",
             tech: [
@@ -61,7 +61,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/tecnohouse.png",
             name: "E-commerce App",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Ecommerce app developed for JavaScript course.",
             git: "https://github.com/Alesso-Chiavarino/TecnoHouse",
             deploy: "https://tecnohouse.netlify.app",
             tech: [
@@ -82,12 +82,15 @@ const ProjectsContainer = () => {
         {
             img: "./img/portafolio.png",
             name: "Portfolio",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Single page developed to tell about me, my experience and show my skills.",
             git: "https://github.com/Alesso-Chiavarino/Portafolio",
             deploy: "https://tecnohouse.netlify.app",
             tech: [
                 {
                     name: "React",
+                },
+                {
+                    name: "Vite",
                 },
                 {
                     name: "Node.js",
@@ -100,7 +103,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/Our-Adventure-Book.png",
             name: "Our Adventure Book",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam numquam! Quaerat, adipisci quisquam consectetur molestias.",
+            description: "Web app developed with MERN stack, using Cloudinary multimedia service.",
             git: "https://github.com/Alesso-Chiavarino/Our-Adventure-Book",
             deploy: "https://our-adventures-book.netlify.app",
             tech: [

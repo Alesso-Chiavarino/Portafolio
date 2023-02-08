@@ -1,8 +1,10 @@
 .technology {
     background-color: #21232E;
-    width: 115px;
+    // width: 115px;
     height: 124px;
     border-radius: 10px;
+    margin: 0 10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,15 +13,7 @@
     span {
         font-size: 16px;
     }
-    // margin-right: 20px !important;
-    // margin-left: 20px;
     .technology-icon {
         width: 60px;
     }
 }
-
-// .hola {
-//     display: flex;
-//     width: 100%;
-//     // justify-content: space-between;
-// }

@@ -5,7 +5,7 @@ const Learning = () => {
   return (
     <article className='learning'>
         <div className="learning-left-side">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, a aliquam maiores sint omnis illum rem quisquam.</p>
+            <p>It gives me true happiness when I add something new to my knowledge.</p>
             <a className='learning-github-btn' target="_blank" href="https://github.com/Alesso-Chiavarino"> <AiFillGithub/> Github Profile</a>
         </div>
         <div className="learning-right-side">

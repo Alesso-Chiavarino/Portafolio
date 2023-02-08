@@ -3,7 +3,7 @@ import { observerContext } from '../../context/ObserverContext';
 import { useContext } from 'react';
 import { Link } from 'react-scroll'
 
-const ListContainer = () => {
+const ListContainer = ({ linksClass, isOpen }) => {
 
     const links = [
         {
@@ -26,11 +26,11 @@ const ListContainer = () => {
     const { observeAbout, observeSkills, observeProjects } = useContext(observerContext);
 
     return (
-        <div className='nav-link-container'>
+        <div className={linksClass}>
             {links.map((link, i) => {
                 return (
-                    observeSkills && link.name == "Skills" || observeAbout && link.name == "About me" || observeProjects && link.name == "Projects" ? <Link key={i} className='nav-link-active' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
-                    </Link> : <Link key={i} className='nav-link' activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
+                    observeSkills && link.name == "Skills" || observeAbout && link.name == "About me" || observeProjects && link.name == "Projects" ? <Link key={i} className='nav-link-active' onClick={() => isOpen(!open)} activeClass="active" to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
+                    </Link> : <Link key={i} className='nav-link' activeClass="active" onClick={() => isOpen(!open)} to={link.path} spy={true} smooth={true} offset={link.offset} duration={900}> {link.name}
                     </Link>
                 )
             })}

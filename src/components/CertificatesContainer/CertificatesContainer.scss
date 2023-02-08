@@ -5,14 +5,15 @@
     display: flex;
     justify-content: space-around;
     align-content: center;
+
 }
 
 .react-multiple-carousel__arrow--right {
-    right: calc(3% - 40px) !important;
+    right: 0 !important;
 }
 
 .react-multiple-carousel__arrow--left {
-    left: calc(3% - 40px) !important;
+    left: 0 !important;
 }
 
 

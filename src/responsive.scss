@@ -1,14 +1,182 @@
 @media screen and (max-width: 450px) {}
 
 // `sm` applies to x-small devices (portrait phones, less than 576px)
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .description-container {
+        width: 100% !important;
+    }
 
-// `md` applies to small devices (landscape phones, less than 768px)
-@media screen and (max-width: 768px) {}
+    .learning {
+        .learning-left-side {
+            .learning-github-btn {
+                width: 100% !important;
+            }
+        }
+    }
+
+    //form
+
+    .card-container {
+        .card {
+            width: 90% !important;
+
+            .contact-info {
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .contact-form {
+                .btn-submit {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+}
+
+// `md` applies to small devices (landscape phones, less than 788px)
+@media screen and (max-width: 788px) {
+    .projects-container {
+        .project {
+            width: 100%;
+            height: fit-content;
+
+            .project-img-container {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    //form
+    .card-container {
+        .card {
+            margin-bottom: 100px;
+        }
+    }
+
+}
 
 // `lg` applies to medium devices (tablets, less than 992px)
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+
+    //baner
+    .banner-container {
+        margin-top: 6.25em !important;
+    }
+
+    //skill
+    .skills-container {
+        width: 100% !important;
+
+        .areas {
+            flex-direction: column;
+            gap: 25px;
+
+            .front-end {
+                width: 80% !important;
+            }
+
+            .back-end {
+                width: 80% !important;
+            }
+        }
+    }
+
+
+    .technologies-slider {
+        width: 100% !important;
+    }
+
+    //nav
+    .navbar-container {
+        top: 0;
+        z-index: 454554;
+        width: 100% !important;
+        position: fixed !important;
+
+        .navbar {
+            box-shadow: none;
+            border-radius: 0 !important;
+            width: 100% !important;
+            background-color: #1A1B23 !important;
+            position: fixed;
+            margin: 0 !important;
+
+            .nav-link-container {
+                display: none !important;
+            }
+        }
+
+        .navbar {
+            .hamburguer {
+                display: block !important;
+            }
+
+            .icons-container {
+                display: none !important;
+            }
+        }
+    }
+
+    //learning 
+
+    .learning {
+        width: 80% !important;
+        flex-direction: column;
+
+        .learning-left-side {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .learning-github-btn {
+                // align-self: start;
+                padding: 12px 14px !important;
+                font-size: 16px;
+                // width: 100% !important;
+            }
+        }
+
+        .learning-right-side {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .learning-icons-container {
+                .learning-icon-container {
+                    border: 0.5px solid #ffffff21;
+                }
+            }
+        }
+    }
+
+    //form 
+    .card {
+        flex-direction: column;
+        width: 80% !important;
+        gap: 50px !important;
+
+        .contact-info {
+            width: 100%;
+        }
+
+        // .contact-form {
+        //     width: 100%;
+        // }
+    }
+}
 
 // `xl` applies to large devices (desktops, less than 1200px)
 
@@ -23,5 +191,12 @@
 @media screen and (max-width: 1400px) {
     body {
         font-size: 14px;
+    }
+
+    //form
+    .card {
+        .contact-form {
+            width: 100%;
+        }
     }
 }

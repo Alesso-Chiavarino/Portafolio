@@ -11,7 +11,7 @@ const CertificatesContainer = () => {
             course: "Desarrollo Web",
             academy: "Coderhouse",
             date: "APR - SEP 2022",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias neque quam in magnam dolore.",
+            description: "Course with +40hs of multimedia, learning HTML, CSS, SASS and Bootstrap, +10 challenges and 1 final project.",
             certificate: "https://www.coderhouse.com/certificados/62e2ba25d1827b001962eda4",
         },
         {
@@ -19,7 +19,7 @@ const CertificatesContainer = () => {
             course: "JavaScript",
             academy: "Coderhouse",
             date: "APR - SEP 2022",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias neque quam in magnam dolore.",
+            description: "Course with +40hs of multimedia learning JavaScript, +10 challenges and 1 final project. ",
             certificate: "https://www.coderhouse.com/certificados/631f60623b1eac001954ac92",
         },
         {
@@ -27,7 +27,7 @@ const CertificatesContainer = () => {
             course: "React",
             academy: "Coderhouse",
             date: "APR - SEP 2022",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias neque quam in magnam dolore.",
+            description: "Course with +32hs of multimedia learning React.js and Firebase, +8 challenges and 1 final project.",
             certificate: "https://www.coderhouse.com/certificados/6363d471e74441000e92750c",
         },
         {
@@ -35,7 +35,7 @@ const CertificatesContainer = () => {
             course: "Front end Developer",
             academy: "Coderhouse",
             date: "APR - SEP 2022",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias neque quam in magnam dolore.",
+            description: "Bootcamp with +800 hours of programming based on real projects.",
             certificate: "https://www.coderhouse.com/certificados/6363d471e74441000e92750f",
         },
         {
@@ -43,7 +43,7 @@ const CertificatesContainer = () => {
             course: "Informatic Engineering",
             academy: "Blas Pascal",
             date: "2022 APR - SOON",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, molestias neque quam in magnam dolore.",
+            description: "Degree course, analysis, design and development of systems.",
             certificate: "#",
         },
     ]
@@ -55,40 +55,76 @@ const CertificatesContainer = () => {
             items: 4
         },
         desktop: {
-            breakpoint: { max: 1600, min: 1400 },
+            breakpoint: { max: 1600, min: 800 },
             items: 3
         },
         tablet: {
-            breakpoint: { max: 1400, min: 800 },
-            items: 3
+            breakpoint: { max: 800, min: 650 },
+            items: 2
         },
         mobile: {
-            breakpoint: { max: 800, min: 0 },
-            items: 2
+            breakpoint: { max: 650, min: 0 },
+            items: 1
         }
     };
 
+    const renderMain = () => {
+        if (window.innerWidth < 1000) {
+            // console.log('hola')
+            return (
+                <Carousel
+                    className="certificates-slider"
+                    swipeable={true}
+                    arrows={true}
+                    // centerMode={true}
+
+                    draggable={true}
+                    showDots={false}
+                    additionalTransfrom={0}
+                    pauseOnHover={true}
+                    rewind={false}
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={4000}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                >
+                    {certificates.map((cert, i) => {
+                        return <Certificate key={i} {...cert} />
+                    })}
+                </Carousel>
+            )
+        } else {
+            return (
+                <Carousel
+                    className="certificates-slider"
+                    swipeable={true}
+                    arrows={true}
+                    // centerMode={true}
+                    draggable={true}
+                    showDots={false}
+                    additionalTransfrom={0}
+                    pauseOnHover={true}
+                    rewind={false}
+                    responsive={responsive}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={4000}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                >
+                    {certificates.map((cert, i) => {
+                        return <Certificate key={i} {...cert} />
+                    })}
+                </Carousel>
+            )
+
+        }
+    }
+
     return (
-            <Carousel
-                className="certificates-slider"
-                swipeable={true}
-                arrows={true}
-                draggable={true}
-                showDots={false}
-                additionalTransfrom={0}
-                pauseOnHover={true}
-                rewind={false}
-                responsive={responsive}
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={4000}
-                keyBoardControl={true}
-                transitionDuration={500}
-            >
-                {certificates.map((cert, i) => {
-                    return <Certificate key={i} {...cert} />
-                })}
-            </Carousel>
+        renderMain()
     )
 }
 

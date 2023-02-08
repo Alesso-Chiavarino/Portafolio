@@ -30,9 +30,9 @@ const Banner = () => {
         <TypeWriter />
       </div>
       <div className='description-container'>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, vel nulla consequatur illum quos veritatis.</p>
+        <p>I'm a committed developer, responsible, detail-oriented, able to search and find creative and effective solutions to challenges of different complexity.</p>
       </div>
-      <div className="cvc-btn-container">
+      <div className="cv-btn-container">
         <CvBtn />
       </div>
     </div>

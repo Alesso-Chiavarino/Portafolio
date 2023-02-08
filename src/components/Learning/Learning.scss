@@ -10,38 +10,54 @@
     border-radius: 5px;
     box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
     color: rgb(212, 212, 212);
+
     .learning-left-side {
         font-weight: 500;
         width: 50%;
+
         p {
             margin-bottom: 30px;
+            font-size: 1.25em;
+            color: #fff;
+            font-family: mark-pro-regular;
         }
+
         .learning-github-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             color: #000 !important;
             padding: 10px 10px;
+            width: 40%;
             font-weight: 500;
-            background-color: #D6D6D6;
-            // border: 1px solid #fff;
+            background-color: #fff;
             border-radius: 5px;
             color: #fff;
             text-decoration: none;
+            transition: all .3s;
             font-family: mark-pro-medium;
+
             &:hover {
-                background-color: #d6d6d6e3;
+                background-color: #21232E;
+                color: #fff !important;
             }
         }
     }
+
     .learning-right-side {
         font-weight: bold;
         color: #a5a5a5;
         font-size: 20px;
         width: 30%;
+
         p {
             font-family: mark-pro-heavy;
         }
+
         .learning-icons-container {
             display: flex;
             gap: 20px;
+
             .learning-icon-container {
                 display: flex;
                 justify-content: center;
@@ -52,9 +68,11 @@
                 background-color: #1A1B23;
                 border-radius: 10px;
                 margin-top: 20px;
+
                 .learning-icon {
                     width: 50px;
                 }
+
                 span {
                     font-size: 14px;
                 }

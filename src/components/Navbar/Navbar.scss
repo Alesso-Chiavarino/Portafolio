@@ -1,43 +1,131 @@
 .navbar-container {
     display: flex;
     justify-content: center;
-}
 
-.navbar {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 1.25em;
-    border-radius: 10px;
-    width: 70%;
-    background-color: #21232E;
-    position: fixed;
-    margin-top: 1.25em;
-    z-index: 500;
-}
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 1.25em;
+        border-radius: 10px;
+        width: 70%;
+        background-color: #21232E;
+        position: fixed;
+        margin-top: 1.25em;
+        z-index: 1500;
+        position: relative;
 
-.icons-container {
-    display: flex;
-    gap: 0.625em;
-}
+        .hamburguer {
+            color: #679CFF;
+            font-size: 25px;
+            display: none;
+        }
 
-.icon-container-light {
-    cursor: pointer;
-    color: #fff;
-    display: flex;
-    border-radius: 5px;
-    padding: 0.625em;
-    background-color: #303341;
-    &:hover {
-        background-color: #343744;
+        .icons-container {
+            display: flex;
+            gap: 0.625em;
+        }
+
+        .icon-container-light {
+            cursor: pointer;
+            color: #fff;
+            display: flex;
+            border-radius: 5px;
+            padding: 0.625em;
+            background-color: #303341;
+
+            &:hover {
+                background-color: #343744;
+            }
+        }
+
+        .icon-container-message {
+            @extend .icon-container-light;
+            background-color: #679CFF;
+
+            &:hover {
+                background-color: #679cffd0;
+            }
+        }
     }
-}
 
-.icon-container-message {
-    @extend .icon-container-light;
-    background-color: #679CFF;
-    &:hover {
-        background-color: #679cffd0;
+    .offcanvas-off {
+        position: fixed;
+        transition: all .2s;
+        // transform: translate(0);
+        transform: translateX(100%);
+        z-index: 1200;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        width: 100%;
+        height: 130vh;
+        background-image: url('./img/wave.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .offcanvas {
+        position: fixed;
+        transition: all .2s;
+        transform: translate(0);
+        // transform: translateX(100%);
+        z-index: 1200;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        width: 100%;
+        height: 130vh;
+        background-image: url('./img/wave.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .nav-link-container-off {
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icons-container-off {
+            // background-color: #fff !important;
+            // width: 450px;
+            width: 50%;
+            z-index: 4545545545;
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px;
+            // justify-content: center;
+            align-items: center;
+
+            // gap: 20px;
+            .btn-message {
+                // margin-top: 1.25em;
+                font-family: mark-pro-bold;
+                // width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.625em;
+                padding: 0.625em;
+                border-radius: 5px;
+                background-color: #679CFF;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: #679cffd0;
+                }
+            }
+
+            .icon-container-message {
+                // background-color: #fff !important;
+                color: #679CFF !important;
+            }
+        }
     }
 }
