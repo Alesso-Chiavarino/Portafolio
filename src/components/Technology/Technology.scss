@@ -1,6 +1,6 @@
 .technology {
+    user-select: none;
     background-color: #21232E;
-    // width: 115px;
     height: 124px;
     border-radius: 10px;
     margin: 0 10px;
@@ -10,9 +10,11 @@
     align-items: center;
     gap: 15px;
     flex-direction: column;
+
     span {
         font-size: 16px;
     }
+
     .technology-icon {
         width: 60px;
     }
