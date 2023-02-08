@@ -40,11 +40,11 @@ const Form = () => {
     try {
       if (nameVal && emailVal && messageVal) {
         setLoader(true);
-        // await sendMailsRequest({
-        //   name,
-        //   email,
-        //   message
-        // })
+        await sendMailsRequest({
+          name,
+          email,
+          message
+        })
       } else {
         if (!nameVal) {
           nameRef.current.className = "form-warning"
