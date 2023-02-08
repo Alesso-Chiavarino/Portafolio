@@ -40,11 +40,11 @@ const Form = () => {
     try {
       if (nameVal && emailVal && messageVal) {
         setLoader(true);
-        await sendMailsRequest({
-          name,
-          email,
-          message
-        })
+        // await sendMailsRequest({
+        //   name,
+        //   email,
+        //   message
+        // })
       } else {
         if (!nameVal) {
           nameRef.current.className = "form-warning"
@@ -74,6 +74,7 @@ const Form = () => {
         setMessageVal(false);
         toast.success('Thank you for your message', {
           position: "top-center",
+          className: 'toastify',
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
