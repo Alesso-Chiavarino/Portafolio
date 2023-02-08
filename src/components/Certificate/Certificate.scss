@@ -5,26 +5,30 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // width: 25em;
+    min-height: 19.375em;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.144);
     border-radius: 0.625em;
     padding: 1.25em;
     gap: 1.25em;
+
     .certificate-academy-icon {
         width: 3.125em;
         border-radius: 50%;
         outline: 1px solid rgba(255, 255, 255, 0.144);
     }
+
     .certificate-course {
         font-size: 1.125em;
         font-family: mark-pro-heavy;
         // font-weight: bold;
     }
+
     .certificate-info {
         display: flex;
         justify-content: center;
         gap: 1.25em;
+
         .certificate-info-academy-btn {
             @extend .certificate-info-date-btn;
             font-size: 0.875em !important;
@@ -33,6 +37,7 @@
             border: 0 !important;
             font-weight: bold;
         }
+
         .certificate-info-date-btn {
             font-size: 0.75rem;
             width: 6.875rem;
@@ -43,10 +48,12 @@
             border: 1px solid #fff;
         }
     }
+
     .cerficate-description {
         font-size: 0.875em;
         // font-weight: normal;
     }
+
     .certificate-link {
         display: flex;
         align-items: center;
@@ -57,9 +64,11 @@
         border-radius: 0.3125em;
         padding: 0.3125em 0.625em;
         background-color: #679cff;
+
         .certificate-icon {
             color: "#fff";
         }
+
         &:hover {
             background-color: #83AEFB;
         }
