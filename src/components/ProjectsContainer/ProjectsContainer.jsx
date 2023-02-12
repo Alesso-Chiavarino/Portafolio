@@ -7,7 +7,7 @@ const ProjectsContainer = () => {
         {
             img: "./img/TechStore.png",
             name: "TechStore App",
-            description: "Ecommerce SPA for the React.js course.",
+            description: "Ecommerce SPA for the React.js course, using mercado pago API.",
             git: "https://github.com/Alesso-Chiavarino/TechStore",
             deploy: "https://tttechstore.netlify.app",
             tech: [
@@ -19,6 +19,12 @@ const ProjectsContainer = () => {
                 },
                 {
                     name: "Firestore",
+                },
+                {
+                    name: "Node.js",
+                },
+                {
+                    name: "Express.js",
                 },
             ],
         },
