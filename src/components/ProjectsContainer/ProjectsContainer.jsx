@@ -130,6 +130,27 @@ const ProjectsContainer = () => {
                 },
             ],
         },
+        {
+            img: "./img/devitools.png",
+            name: "Devitools",
+            description: "Web app to save developers time. Developed with Next.js.",
+            git: "https://github.com/Alesso-Chiavarino/devitools",
+            deploy: "https://devitools.vercel.app",
+            tech: [
+                {
+                    name: "Next.js",
+                },
+                {
+                    name: "Tailwind",
+                },
+                {
+                    name: "Node.js",
+                },
+                {
+                    name: "Express.js",
+                },
+            ],
+        },
     ]
 
     return (
