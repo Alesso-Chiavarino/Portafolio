@@ -174,7 +174,9 @@
         }
 
         .contact-form {
-            input, textarea {
+
+            input,
+            textarea {
                 font-size: 16px !important;
             }
         }
@@ -183,6 +185,12 @@
         //     width: 100%;
         // }
     }
+
+    .projects {
+        .projects-container {
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+    }
 }
 
 // `xl` applies to large devices (desktops, less than 1200px)
@@ -190,6 +198,12 @@
 @media screen and (max-width: 1200px) {
     body {
         font-size: 12px !important;
+    }
+
+    .projects {
+        .projects-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
     }
 }
 

@@ -9,9 +9,10 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 25em;
+    // width: 25em;
+    // width: 100%;
     padding: 1.875em;
-    height: 28.125em;
+    // height: 28.125em;
     gap: 1.25em;
     background-color: #21232E;
     border-radius: 10px;
@@ -25,8 +26,9 @@
         border-radius: 10px;
         .project-img {
             margin: 0 auto;
-            width: 21.875em;
-            height: 12.5em;
+            width: 100%;
+            // width: 21.875em;
+            // height: 12.5em;
         }
     }
     .project-info1 {
@@ -55,6 +57,7 @@
     .project-info2 {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 0.625em;
         .tech-used {
             border: 1px solid #679CFF;
