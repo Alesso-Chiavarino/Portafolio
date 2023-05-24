@@ -1,9 +1,11 @@
 import nodemailer from 'nodemailer';
-import { PASSWORD, EMAIL } from '../config.js';
+import { ENV } from '../utils/env.utils.js';
 
 export const sendMail = async (req, res) => {
 
     const { name, email, message } = req.body;
+
+    const { EMAIL, PASSWORD } = ENV.NODEMAILER;
 
     const contentHTML = `
         <h1>User Information</h1>
@@ -31,7 +33,7 @@ export const sendMail = async (req, res) => {
     }
 
     const transporter = nodemailer.createTransport(config)
-    
+
     try {
 
         const info = await transporter.sendMail(fullMessage)
@@ -43,7 +45,7 @@ export const sendMail = async (req, res) => {
 
         console.log(info);
 
-    } catch(error) {
+    } catch (error) {
         res.json({
             status: 'error',
             error
