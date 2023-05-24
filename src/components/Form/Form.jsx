@@ -1,9 +1,10 @@
 import './Form.scss';
+import 'react-toastify/dist/ReactToastify.css';
 import { RiSendPlaneFill } from 'react-icons/ri'
 import { useState, useRef } from 'react';
 import { sendMailsRequest } from '../../api/mail.api';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { generateToast } from '../../utils/toast.utils.js';
 
 // import Loader from '../Loader/Loader';
 
@@ -37,6 +38,7 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let isRequestSuccessful = false;
     try {
       if (nameVal && emailVal && messageVal) {
         setLoader(true);
@@ -45,6 +47,7 @@ const Form = () => {
           email,
           message
         })
+        isRequestSuccessful = true
       } else {
         if (!nameVal) {
           nameRef.current.className = "form-warning"
@@ -63,26 +66,21 @@ const Form = () => {
     }
     catch (error) {
       console.log(error);
+      isRequestSuccessful = false
+      return
     }
     finally {
-      if (nameVal && emailVal && messageVal) {
+      if (nameVal && emailVal && messageVal && isRequestSuccessful) {
         setName('');
         setEmail('');
         setMessage('');
         setNameVal(false);
         setEmailVal(false);
         setMessageVal(false);
-        toast.success('Thank you for your message', {
-          position: "top-center",
-          className: 'toastify',
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
+        generateToast('success', 'Thanks for your message :)')
+
+      } else {
+        generateToast('error', 'We cannot sent your message')
       }
       setLoader(false);
     }

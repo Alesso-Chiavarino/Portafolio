@@ -1,9 +1,10 @@
 import express from 'express';
 import appRoutes from './src/routes/app.routes.js'
 import cors from 'cors';
+import { ENV } from './src/config/env.config.js';
 
 const app = express();
-const PORT = 4000;
+const { PORT } = ENV
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
