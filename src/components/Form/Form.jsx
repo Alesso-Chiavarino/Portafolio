@@ -4,7 +4,7 @@ import { RiSendPlaneFill } from 'react-icons/ri'
 import { useState, useRef } from 'react';
 import { sendMailsRequest } from '../../api/mail.api';
 import { ToastContainer } from 'react-toastify';
-import { generateToast } from '../../utils/toast.utils.js';
+import { generateToast } from '../../utils/toast.utils.js'
 
 // import Loader from '../Loader/Loader';
 
