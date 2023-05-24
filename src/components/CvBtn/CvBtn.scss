@@ -1,4 +1,8 @@
 .cv-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-family: mark-pro-heavy;
     text-decoration: none;
     color: #83AEFB;
@@ -7,5 +11,9 @@
     border: 1px solid #83AEFB;
     &:hover {
         background-color: #83adfb1c;
+    }
+
+    .download-icon {
+        font-size: 20px;
     }
 }

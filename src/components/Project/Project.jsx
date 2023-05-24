@@ -1,24 +1,32 @@
 import './Project.scss';
-import {AiFillGithub} from 'react-icons/ai'
-import {IoMdRocket} from 'react-icons/io'
+import { AiFillGithub } from 'react-icons/ai'
+import { IoMdRocket } from 'react-icons/io'
+import { generateToast } from '../../utils/toast.utils.js';
 
-const Project = ({name, tech, description, img, git, deploy}) => {
+const Project = ({ name, tech, description, img, git, deploy }) => {
+
+  const checkPermission = (e) => {
+    generateToast('error', 'Deploy not available, you need to contact me to get permission');
+  }
+
   return (
     <article className='project'>
-        <div className="project-img-container">
-          <img className='project-img' src={img} alt={name} />
+      <div className="project-img-container">
+        <img className='project-img' src={img} alt={name} />
+      </div>
+      <div className="project-info1">
+        <h3>{name}</h3>
+        <div className="project-icon-links">
+          <a className='icon-links' target="_blank" href={git}> <AiFillGithub style={{ fontSize: "25px" }} color='white' /> </a>
+          {deploy === 'denied' ? <span className='icon-links' onClick={checkPermission} > <IoMdRocket style={{ fontSize: "25px" }} color='white' /> </span>
+            :
+            <a className='icon-links' target="_blank" href={deploy} > <IoMdRocket style={{ fontSize: "25px" }} color='white' /> </a>}
         </div>
-        <div className="project-info1">
-            <h3>{name}</h3>
-            <div className="project-icon-links">
-                <a className='icon-links' target="_blank" href={git}> <AiFillGithub style={{fontSize: "25px"}} color='white'/> </a>
-                <a className='icon-links' target="_blank" href={deploy}> <IoMdRocket style={{fontSize: "25px"}} color='white'/> </a>
-            </div>
-        </div>
-        <div className="project-info2">
-          {tech.map((t, i) => <span className='tech-used' key={i}> {t.name} </span> )}
-        </div>
-        <p className='project-info3'>{description}</p>
+      </div>
+      <div className="project-info2">
+        {tech.map((t, i) => <span className='tech-used' key={i}> {t.name} </span>)}
+      </div>
+      <p className='project-info3'>{description}</p>
     </article>
   )
 }

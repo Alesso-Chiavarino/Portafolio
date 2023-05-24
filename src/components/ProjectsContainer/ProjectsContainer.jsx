@@ -90,7 +90,7 @@ const ProjectsContainer = () => {
             name: "Portfolio",
             description: "Single page developed to tell about me, my experience and show my skills.",
             git: "https://github.com/Alesso-Chiavarino/Portafolio",
-            deploy: "https://tecnohouse.netlify.app",
+            deploy: "#",
             tech: [
                 {
                     name: "React",
@@ -111,7 +111,7 @@ const ProjectsContainer = () => {
             name: "Our Adventure Book",
             description: "Web app developed with MERN stack, using Cloudinary multimedia service.",
             git: "https://github.com/Alesso-Chiavarino/Our-Adventure-Book",
-            deploy: "https://our-adventures-book.netlify.app",
+            deploy: "denied",
             tech: [
                 {
                     name: "React",

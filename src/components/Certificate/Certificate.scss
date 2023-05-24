@@ -65,9 +65,16 @@
         padding: 0.3125em 0.625em;
         background-color: #679cff;
 
-        .certificate-icon {
-            color: "#fff";
+        span {
+            display: flex;
+            align-items: center;
+
+            .certificate-icon {
+                color: "#fff";
+                margin-right: 2px;
+            }
         }
+       
 
         &:hover {
             background-color: #83AEFB;
