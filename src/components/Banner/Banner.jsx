@@ -21,7 +21,7 @@ const Banner = () => {
   return (
     <div className="banner-container" ref={ref} id="about">
       <div className="greating-container">
-        <h3>Hi, i am</h3>
+        <h3>Hi, I am</h3>
       </div>
       <div className="name-container">
         <h1>Alessandro Chiavarino</h1>

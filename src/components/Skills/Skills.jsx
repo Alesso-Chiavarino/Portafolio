@@ -83,6 +83,14 @@ const Skills = () => {
             img: "./img/skills/next-light.svg",
             name: "Next.js"
         },
+        {
+            img: "./img/skills/mocha.svg",
+            name: "Mocha"
+        },
+        {
+            img: "./img/skills/docker.svg",
+            name: "Docker"
+        }
     ]
 
     const { ref, inView, entry } = useInView({
