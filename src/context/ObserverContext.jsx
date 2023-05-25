@@ -1,6 +1,8 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useContext } from 'react'
 
-export const observerContext = createContext();
+const observerContext = createContext();
+
+export const useObserver = () => useContext(observerContext)
 
 const ObserverProvider = ({ children }) => {
 
@@ -16,14 +18,12 @@ const ObserverProvider = ({ children }) => {
         setObserveSkills(validate);
     }
 
-    // console.log(observeSkills)
-
     const observerP = (validate) => {
         setObserveProjects(validate);
     }
 
     return (
-        <observerContext.Provider value={{observerA, observerS, observerP, observeAbout, observeSkills, observeProjects}}>
+        <observerContext.Provider value={{ observerA, observerS, observerP, observeAbout, observeSkills, observeProjects }}>
             {children}
         </observerContext.Provider>
     )

@@ -1,17 +1,19 @@
 import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
 import './Projects.scss';
 import { useInView } from 'react-intersection-observer';
-import { observerContext } from '../../context/ObserverContext';
-import { useContext, useEffect } from 'react';
+import { useObserver } from '../../context/ObserverContext';
+import { useEffect } from 'react';
 
 const Projects = () => {
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.5,
+    // threshold: 0.5,
+    threshold: 0.4,
   });
 
-  const { observerP } = useContext(observerContext);
+
+  const { observerP } = useObserver()
 
   useEffect(() => {
     inView ? observerP(true) : observerP(false)

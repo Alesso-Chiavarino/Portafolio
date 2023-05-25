@@ -1,6 +1,5 @@
 import './ListContainer.scss';
-import { observerContext } from '../../context/ObserverContext';
-import { useContext } from 'react';
+import { useObserver } from '../../context/ObserverContext';
 import { Link } from 'react-scroll'
 
 const ListContainer = ({ linksClass, isOpen }) => {
@@ -23,7 +22,7 @@ const ListContainer = ({ linksClass, isOpen }) => {
         }
     ]
 
-    const { observeAbout, observeSkills, observeProjects } = useContext(observerContext);
+    const { observeAbout, observeSkills, observeProjects } = useObserver()
 
     return (
         <div className={linksClass}>

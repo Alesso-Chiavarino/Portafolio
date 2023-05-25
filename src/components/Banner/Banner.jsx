@@ -2,8 +2,8 @@ import TypeWriter from '../TypeWriter/TypeWriter';
 import CvBtn from '../CvBtn/CvBtn';
 import './Banner.scss';
 import { useInView } from 'react-intersection-observer';
-import { observerContext } from '../../context/ObserverContext';
-import { useContext, useEffect } from 'react';
+import { useObserver } from '../../context/ObserverContext';
+import { useEffect } from 'react';
 
 const Banner = () => {
 
@@ -12,7 +12,9 @@ const Banner = () => {
     threshold: 0.5,
   });
 
-  const { observerA } = useContext(observerContext);
+
+
+  const { observerA } = useObserver()
 
   useEffect(() => {
     inView ? observerA(true) : observerA(false)
@@ -30,7 +32,8 @@ const Banner = () => {
         <TypeWriter />
       </div>
       <div className='description-container'>
-        <p>I'm a committed developer, responsible, detail-oriented, able to search and find creative and effective solutions to challenges of different complexity.</p>
+        <p>I'm a committed developer, responsible, detail-oriented, able to search and find creative and
+          effective solutions to challenges of different complexity.</p>
       </div>
       <div className="cv-btn-container">
         <CvBtn />

@@ -2,13 +2,17 @@ import express from 'express';
 import appRoutes from './src/routes/app.routes.js'
 import cors from 'cors';
 import { ENV } from './src/config/env.config.js';
+import { LogColors } from './src/utils/console.utils.js';
 
-const app = express();
 const { PORT } = ENV
+const app = express()
+const serverUri = `http://localhost:${PORT}`
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://portafolio-alessandro-chiavarino.vercel.app/']
+}));
 app.use('/api', appRoutes);
 
-app.listen(PORT, () => console.log('server is listening on port ', PORT));
+app.listen(PORT, () => LogColors.logBlue(`server is running on ${serverUri}`))

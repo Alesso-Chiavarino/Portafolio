@@ -2,8 +2,8 @@ import Learning from '../Learning/Learning';
 import TecnologiesCarousel from '../TecnologiesCarousel/TecnologiesCarousel';
 import './Skills.scss';
 import { useInView } from 'react-intersection-observer';
-import { observerContext } from '../../context/ObserverContext';
-import { useContext, useEffect } from 'react';
+import { useObserver } from '../../context/ObserverContext';
+import { useEffect } from 'react';
 
 const Skills = () => {
 
@@ -98,7 +98,7 @@ const Skills = () => {
         threshold: 0.5,
     });
 
-    const { observerS } = useContext(observerContext);
+    const { observerS } =   useObserver()
 
     useEffect(() => {
         inView ? observerS(true) : observerS(false)
