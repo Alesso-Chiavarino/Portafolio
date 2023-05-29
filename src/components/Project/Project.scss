@@ -1,64 +1,64 @@
-@font-face {
-    font-family: mark-pro-black;
-    src: url('../../assets/fonts/MarkPro-Black.otf');
-}
-
 .project {
     box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
     margin-top: 1.25em;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    // width: 25em;
-    // width: 100%;
     padding: 1.875em;
-    // height: 28.125em;
     gap: 1.25em;
     background-color: #21232E;
     border-radius: 10px;
+
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transition: 0.5s all;
         transform: scale(1.02);
     }
+
     .project-img-container {
         overflow: hidden;
         border-radius: 10px;
+
         .project-img {
             margin: 0 auto;
             width: 100%;
-            // width: 21.875em;
-            // height: 12.5em;
         }
     }
+
     .project-info1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         h3 {
             color: #fff;
             font-size: 1.375em;
             font-family: mark-pro-black;
         }
+
         .project-icon-links {
             display: flex;
             gap: 0.625em;
+
             .icon-links {
                 display: flex;
                 padding: 0.3125em;
                 border: 1px solid rgba(255, 255, 255, 0.267);
                 border-radius: 5px;
+
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.075);
                 }
             }
         }
     }
+
     .project-info2 {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         gap: 0.625em;
+
         .tech-used {
             border: 1px solid #679CFF;
             border-radius: 5px;
@@ -67,7 +67,54 @@
             color: #679CFF;
         }
     }
+
     .project-info3 {
         color: #CED4D4;
     }
+}
+
+.project-light {
+    @extend .project;
+
+    background-color: #F3F3FF;
+    box-shadow: 0 4px 6px rgb(9 17 28 / 30%);
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .project-info1 {
+
+        h3 {
+            color: #000;
+        }
+
+        .project-icon-links {
+            .icon-links {
+
+                border: 1px solid rgba(0, 0, 0, 0.672);
+
+                svg {
+                    color: #000 !important;
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.075);
+                }
+            }
+        }
+    }
+
+    .project-info2 {
+
+        .tech-used {
+            border: 1px solid #4998ff;
+            color: #4998ff;
+        }
+    }
+
+    .project-info3 {
+        color: #4D515C;
+    }
+
 }

@@ -1,75 +1,5 @@
 @import '../../variables';
 
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-
-:root {
-  --card-height: 600px;
-  --card-width: 70%;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  display: flex;
-  gap: 100px;
-  margin-bottom: 200px;
-  // margin-bottom: 100px;
-  // z-index: ;
-  background: #191c29;
-  width: var(--card-width);
-  // height: var(--card-height);
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  font-size: 1.5em;
-  color: rgb(88 199 250 / 0%);
-  font-family: cursive;
-  padding: 40px;
-}
-
-.card::before {
-  content: "";
-
-  width: 101%;
-  height: 101%;
-  border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-  position: absolute;
-  z-index: -1;
-  animation: spin 2.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-
-  content: "";
-  // top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 90%;
-  width: 90%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-  opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
 @keyframes spin {
   0% {
     --rotate: 0deg;
@@ -80,84 +10,205 @@
   }
 }
 
-.contact-info {
-  height: 450px;
-  padding: 20px;
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 600px;
+  --card-width: 70%;
+}
+
+.card-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 
-  // width: 35%;
-  width: fit-content;
-  background-color: #21232E;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
-
-  // width: 300px;
-  // height: 300px;
-  .contact-img {
-    margin: 0 auto;
-    width: 200px;
-    position: relative;
-    bottom: 100px;
-  }
-
-  h3 {
-    font-family: mark-pro-heavy;
-    margin-top: -70px;
-    margin-bottom: 20px;
-    // color: #fff;
-    font-size: 20px;
-    text-align: left;
-    color: #c2c2c2;
-  }
-
-  .card-github,
-  .linkedin,
-  .mail,
-  .card-whatsapp {
-    margin-bottom: 20px;
-    width: 100%;
+  .card {
     display: flex;
-    gap: 20px;
+    gap: 100px;
+    margin-bottom: 200px;
+    background: #191c29;
+    width: var(--card-width);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    font-family: cursive;
+    padding: 40px;
 
-    .network {
-      font-family: mark-pro-bold;
-      width: 90%;
-      text-align: left;
+    .contact-info {
+      height: 450px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      font-size: 14px;
-      color: #838383;
+      width: fit-content;
+      background-color: #21232E;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
 
-      .link-network {
-        color: #fff;
-        text-decoration: none;
-        &:hover {
-          color: #83AEFB;
+      .contact-img {
+        margin: 0 auto;
+        width: 200px;
+        position: relative;
+        bottom: 100px;
+      }
+
+      h3 {
+        font-family: mark-pro-heavy;
+        margin-top: -70px;
+        margin-bottom: 20px;
+        // color: #fff;
+        font-size: 20px;
+        text-align: left;
+        color: #c2c2c2;
+      }
+
+      .card-github,
+      .linkedin,
+      .mail,
+      .card-whatsapp {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+
+        .network {
+          font-family: mark-pro-bold;
+          width: 90%;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          color: #838383;
+
+          .link-network {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+              color: #83AEFB;
+            }
+          }
+        }
+
+        .contact-icon {
+          color: #83AEFB !important;
+          font-size: 40px;
+          border: 1px solid rgba(255, 255, 255, 0.315);
+          border-radius: 5px;
+          padding: 6px;
+          // width: 10%;
         }
       }
     }
 
-    .contact-icon {
-      color: #83AEFB !important;
-      font-size: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.315);
-      border-radius: 5px;
-      padding: 6px;
-      // width: 10%;
+    .contact-form {
+      width: 65%;
+
+      h3 {
+        font-family: mark-pro-heavy;
+        font-size: 25px;
+        text-align: left;
+        color: $my-blue;
+        --tw-text-opacity: 1;
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  .card::before {
+    content: "";
+
+    width: 101%;
+    height: 101%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    animation: spin 2.5s linear infinite;
+  }
+
+  .card::after {
+    position: absolute;
+
+    content: "";
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
   }
 }
 
-.contact-form {
-  width: 65%;
+.card-container-light {
+  @extend .card-container;
 
-  h3 {
-    font-family: mark-pro-heavy;
-    font-size: 25px;
-    text-align: left;
-    color: $my-blue;
-    --tw-text-opacity: 1;
-    margin-bottom: 20px;
+  .card {
+    background: #191c29;
+    color: rgb(88 199 250 / 0%);
+
+    .contact-info {
+      background-color: #21232E;
+      box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
+
+      h3 {
+        color: #c2c2c2;
+      }
+
+      .card-github,
+      .linkedin,
+      .mail,
+      .card-whatsapp {
+
+        .network {
+          color: #838383;
+
+          .link-network {
+            color: #fff;
+
+            &:hover {
+              color: #83AEFB;
+            }
+          }
+        }
+
+        .contact-icon {
+          color: #83AEFB !important;
+          border: 1px solid rgba(255, 255, 255, 0.315);
+        }
+      }
+    }
+
+    .contact-form {
+      h3 {
+        color: $my-blue;
+      }
+    }
+  }
+
+  .card::before {
+    content: "";
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  }
+
+  .card::after {
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
   }
 }

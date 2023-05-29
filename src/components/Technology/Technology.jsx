@@ -1,10 +1,14 @@
+import { useTheme } from '../../context/ThemeContext.jsx';
 import './Technology.scss';
 
-const Technology = ({img, name}) => {
+const Technology = ({ img, name }) => {
+
+  const { isDark } = useTheme()
+
   return (
-    <div className='technology'>
-        <img className='technology-icon' src={img} alt={name} />
-        <span>{name}</span>
+    <div className={`technology ${isDark ? 'technology' : 'technology-light'}`}>
+      <img className='technology-icon' src={img} alt={name} />
+      <span>{name}</span>
     </div>
   )
 }

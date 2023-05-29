@@ -9,7 +9,6 @@
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
-    color: rgb(212, 212, 212);
 
     .learning-left-side {
         font-weight: 500;
@@ -21,6 +20,7 @@
             color: #fff;
             font-family: mark-pro-regular;
         }
+
         a {
             .github-icon {
                 font-size: 50px;
@@ -73,6 +73,7 @@
                 background-color: #1A1B23;
                 border-radius: 10px;
                 margin-top: 20px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
                 .learning-icon {
                     width: 50px;
@@ -81,6 +82,40 @@
                 span {
                     font-size: 14px;
                 }
+            }
+        }
+    }
+}
+
+.learning-light {
+    @extend .learning;
+
+    background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1685372746/Things/wave_light_dyotrn.svg');
+    box-shadow: 0 4px 6px rgb(9 17 28 / 30%);
+
+    .learning-left-side {
+
+        p {
+            color: #000;
+        }
+
+        .learning-github-btn {
+            background-color: #fff;
+            color: #fff;
+
+            &:hover {
+                background-color: #EEEEFC;
+                color: #000 !important;
+            }
+        }
+    }
+
+    .learning-right-side {
+        color: #93959E;
+
+        .learning-icons-container {
+            .learning-icon-container {
+                background-color: #F8F8FF;
             }
         }
     }

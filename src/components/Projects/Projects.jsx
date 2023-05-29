@@ -3,8 +3,11 @@ import './Projects.scss';
 import { useInView } from 'react-intersection-observer';
 import { useObserver } from '../../context/ObserverContext';
 import { useEffect } from 'react';
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Projects = () => {
+
+  const { isDark } = useTheme()
 
   const { ref, inView } = useInView({
     /* Optional options */
@@ -20,7 +23,7 @@ const Projects = () => {
   }, [inView])
 
   return (
-    <section className='projects' ref={ref} id="projects" >
+    <section className={isDark ? 'projects' : 'projects-light'} ref={ref} id="projects" >
       <h1 className='section-title'>My Projects</h1>
       <ProjectsContainer />
     </section>

@@ -1,9 +1,13 @@
+import { useTheme } from '../../context/ThemeContext.jsx';
 import './Learning.scss';
 import { AiFillGithub } from 'react-icons/ai'
 
 const Learning = () => {
+
+    const { isDark } = useTheme()
+
     return (
-        <article className='learning'>
+        <article className={isDark ? 'learning' : 'learning-light'}>
             <div className="learning-left-side">
                 <p>It gives me true happiness when I add something new to my knowledge.</p>
                 <a className='learning-github-btn' target="_blank" href="https://github.com/Alesso-Chiavarino"> <AiFillGithub className='github-icon' /> Github Profile</a>

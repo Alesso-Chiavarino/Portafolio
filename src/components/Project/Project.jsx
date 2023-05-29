@@ -2,15 +2,18 @@ import './Project.scss';
 import { AiFillGithub } from 'react-icons/ai'
 import { IoMdRocket } from 'react-icons/io'
 import { generateToast } from '../../utils/toast.utils.js';
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Project = ({ name, tech, description, img, git, deploy }) => {
+
+  const { isDark } = useTheme()
 
   const checkPermission = (e) => {
     generateToast('error', 'Deploy not available, you need to contact me to get permission');
   }
 
   return (
-    <article className='project'>
+    <article className={isDark ? 'project' : 'project-light'}>
       <div className="project-img-container">
         <img className='project-img' src={img} alt={name} />
       </div>

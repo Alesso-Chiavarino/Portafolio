@@ -31,6 +31,11 @@
             .area-span {
                 margin-bottom: 1.25em;
             }
+
+            .tecnologies-carousel {
+                color: #fff;
+                max-width: 50%;
+            }
         }
 
         .back-end {
@@ -39,16 +44,22 @@
     }
 }
 
-.section-title {
-    margin-top: 2.5rem;
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 3.125rem;
-    text-align: center;
-    font-family: mark-pro-heavy;
-}
 
-.tecnologies-carousel {
-    color: #fff;
-    max-width: 50%;
+.skills-container-light {
+    @extend .skills-container;
+
+    .areas {
+
+        .front-end {
+            color: #93959E;
+        }
+
+        .back-end {
+            color: #93959E;
+        }
+    }
+
+    .section-title {
+        color: #000;
+    }
 }

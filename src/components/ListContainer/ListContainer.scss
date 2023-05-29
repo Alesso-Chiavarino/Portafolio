@@ -34,9 +34,15 @@
 .nav-link-light {
     @extend .nav-link;
     color: #303341;
+
+    &:hover {
+        background-color: #3033410e;
+        border-radius: 5px;
+    }
 }
 
 .nav-link-active-light {
     @extend .nav-link-active;
+    background-color: #3033410e;
     color: #303341;
 }

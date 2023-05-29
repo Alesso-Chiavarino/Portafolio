@@ -4,10 +4,14 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 import { BsWhatsapp } from 'react-icons/bs'
 import Form from '../Form/Form';
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 const MagicCard = () => {
+
+    const { isDark } = useTheme()
+
     return (
-        <div className='card-container'>
+        <div className={isDark ? 'card-container' : 'card-container-light'}>
             <article className='card'>
                 <div className="contact-info">
                     <img className='contact-img' src="./img/contact-vector.png" alt="" />

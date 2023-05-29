@@ -1,13 +1,8 @@
 .projects-container {
     margin: 0 auto;
     width: 80%;
-    // height: 400px;
-    // display: flex;
-    // justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.5em;
-    // justify-content: ;
-    // align-items: center;
     flex-wrap: wrap;
 }
