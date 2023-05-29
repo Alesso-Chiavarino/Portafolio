@@ -8,12 +8,20 @@ import Navbar from './components/Navbar/Navbar'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ObserverProvider from './context/ObserverContext'
+import ThemeProvider, { useTheme } from './context/ThemeContext.jsx';
 
 const App = () => {
 
+  const { isDark } = useTheme()
+
+  if (isDark) {
+    document.body.style.backgroundColor = '#1A1B23'
+  } else {
+    document.body.style.backgroundColor = '#F8F8FF'
+  }
 
   return (
-    <ObserverProvider>
+    <>
       <Navbar />
       <Banner />
       <CertificatesContainer />
@@ -21,8 +29,18 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-    </ObserverProvider>
+    </>
   )
 }
 
-export default App
+const AppWrapper = () => {
+  return (
+    <ThemeProvider>
+      <ObserverProvider>
+        <App />
+      </ObserverProvider>
+    </ThemeProvider>
+  )
+}
+
+export default AppWrapper

@@ -4,8 +4,12 @@ import { useInView } from 'react-intersection-observer';
 import { useObserver } from '../../context/ObserverContext';
 import { useEffect } from 'react';
 import './Banner.scss';
+import { useTheme } from '../../context/ThemeContext.jsx';
+
 
 const Banner = () => {
+
+  const { isDark } = useTheme()
 
   const { ref, inView } = useInView({
     /* Optional options */
@@ -19,7 +23,7 @@ const Banner = () => {
   }, [inView])
 
   return (
-    <div className="banner-container" ref={ref} id="about">
+    <div className={isDark ? 'banner-container' : 'banner-container-white'} ref={ref} id="about">
       <div className="greating-container">
         <h3>Hi, I am</h3>
       </div>

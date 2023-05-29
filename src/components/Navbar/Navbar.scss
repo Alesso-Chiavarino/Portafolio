@@ -128,3 +128,37 @@
         }
     }
 }
+
+.navbar-container-light {
+    @extend .navbar-container;
+
+    .navbar {
+        background-color: #F3F3FF;
+
+        .hamburguer {
+            color: #679CFF;
+            font-size: 25px;
+            display: none;
+        }
+
+        .icon-container-light {
+            color: #303341;
+            background-color: transparent;
+
+            &:hover {
+                background-color: #34374421;
+            }
+        }
+
+        .icon-container-message {
+            @extend .icon-container-light;
+            color: #fff;
+            background-color: #679CFF;
+
+            &:hover {
+                background-color: #679cffd0;
+            }
+        }
+    }
+
+}

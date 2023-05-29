@@ -1,4 +1,4 @@
-footer {
+.footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,5 +18,13 @@ footer {
         font-size: 0.875em;
         font-family: mark-pro-bold;
         margin-bottom: 1.25em;
+    }
+}
+
+.footer-light {
+    @extend .footer;
+
+    span {
+        color: #919295;
     }
 }

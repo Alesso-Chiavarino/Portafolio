@@ -80,3 +80,29 @@
         }
     }
 }
+
+.certificate-light {
+    @extend .certificate;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+
+    .certificate-academy-icon {
+        outline: 1px solid rgba(0, 0, 0, 0.144);
+    }
+
+    .certificate-course {
+        color: #000;
+    }
+
+    .certificate-info-academy-btn {
+        background-color: #3c76e0;
+    }
+
+    .certificate-link {
+        background-color: #3c76e0;
+
+        &:hover {
+            background-color: #83AEFB;
+        }
+    }
+}

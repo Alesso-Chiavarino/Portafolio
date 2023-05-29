@@ -30,6 +30,20 @@
     }
 }
 
+.footer-network-container-light {
+    @extend .footer-network-container;
+
+    .twitter,
+    .github,
+    .whatsapp,
+    .instagram,
+    .facebook {
+        // color: #000;
+        border: 1px solid rgba(0, 0, 0, 0.144);
+        text-shadow: 0 0 2px #4998ff, 0 0 2px #4998ff, 0 0 2px #4998ff,
+            0 0 2px #4998ff;
+    }
+}
 
 
 // .twitter {

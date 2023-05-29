@@ -15,3 +15,13 @@
         background-color: #83adfb1c;
     }
 }
+
+.cv-link-light {
+    @extend .cv-link;
+    color: #4998ff;
+    border: 1px solid #4998ff;
+
+    &:hover {
+        background-color: #0000001c;
+    }
+}

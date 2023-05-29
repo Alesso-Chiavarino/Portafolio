@@ -1,3 +1,4 @@
+import { useTheme } from '../../context/ThemeContext.jsx';
 import { certificates } from '../../data/certificates.js';
 import Certificate from '../Certificate/Certificate';
 import './CertificatesContainer.scss';
@@ -5,6 +6,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const CertificatesContainer = () => {
+
+    const { isDark } = useTheme()
 
     const responsive = {
         superLargeDesktop: {
@@ -30,7 +33,7 @@ const CertificatesContainer = () => {
         if (window.innerWidth < 1000) {
             return (
                 <Carousel
-                    className="certificates-slider"
+                    className={isDark ? 'certificates-slider' : 'certificates-slider-light'}
                     swipeable={true}
                     arrows={true}
                     draggable={true}
@@ -53,7 +56,7 @@ const CertificatesContainer = () => {
         } else {
             return (
                 <Carousel
-                    className="certificates-slider"
+                    className={isDark ? 'certificates-slider' : 'certificates-slider-light'}
                     swipeable={true}
                     arrows={true}
                     draggable={true}

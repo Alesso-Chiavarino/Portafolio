@@ -1,8 +1,12 @@
 import './FooterIcons.scss';
+import { useTheme } from '../../context/ThemeContext';
 
 const FooterIcons = () => {
+
+    const { isDark } = useTheme()
+
     return (
-        <div className='footer-network-container'>
+        <div className={isDark ? 'footer-network-container' : 'footer-network-container-light'}>
             <a href="https://wa.me/3513079987" target="_blank"> <i className='whatsapp fa fa-whatsapp'></i> </a>
 
             <a href='https://github.com/Alesso-Chiavarino' target="_blank">

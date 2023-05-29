@@ -1,9 +1,13 @@
+import { useTheme } from '../../context/ThemeContext.jsx';
 import './Brand.scss';
 import { Link } from 'react-scroll'
 
 const Brand = () => {
+
+  const { isDark } = useTheme()
+
   return (
-    <div className='brand-container'>
+    <div className={isDark ? 'brand-container' : 'brand-container-light'}>
       <Link className='brand-link' activeClass="active" to={"about"} spy={true} smooth={true} offset=
         {-100} duration={900}>
         <img className='portafolio-icon' src="./img/icon-light.png" alt="icon" />

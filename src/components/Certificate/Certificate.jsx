@@ -1,10 +1,14 @@
 import './Certificate.scss';
 import { TbFileCertificate } from 'react-icons/tb'
 import { MdWatchLater } from 'react-icons/md'
+import { useTheme } from '../../context/ThemeContext';
 
 const Certificate = ({ img, course, academy, date, description, certificate }) => {
+
+    const { isDark } = useTheme()
+
     return (
-        <article className='certificate'>
+        <article className={isDark ? 'certificate' : 'certificate-light'}>
             <img className='certificate-academy-icon' src={img} alt={academy} />
             <span className='certificate-course'>{course}</span>
             <div className='certificate-info'>

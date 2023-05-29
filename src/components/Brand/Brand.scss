@@ -27,3 +27,17 @@
         }
     }
 }
+
+.brand-container-light {
+    @extend .brand-container;
+
+    .brand-link {
+        .brand-name {
+            color: #000;
+        }
+
+        .brand-lastname {
+            color: #4998ff;
+        }
+    }
+}

@@ -30,3 +30,13 @@
         width: 100%;
     }
 }
+
+.nav-link-light {
+    @extend .nav-link;
+    color: #303341;
+}
+
+.nav-link-active-light {
+    @extend .nav-link-active;
+    color: #303341;
+}

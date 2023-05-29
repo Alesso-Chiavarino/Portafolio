@@ -44,3 +44,24 @@
         margin-top: 1.5625em;
     }
 }
+
+.banner-container-white {
+    @extend .banner-container;
+    background-color: #F8F8FF;
+
+    .greating-container {
+        color: #000;
+    }
+
+    .name-container {
+        color: #4998ff;
+    }
+
+    .area-container {
+        color: #000;
+    }
+
+    .description-container {
+        color: #1A202B;
+    }
+}
