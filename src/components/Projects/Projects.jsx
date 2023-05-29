@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 const Projects = () => {
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     // threshold: 0.5,
     threshold: 0.4,

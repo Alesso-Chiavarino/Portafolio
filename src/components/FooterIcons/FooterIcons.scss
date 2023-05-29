@@ -3,31 +3,34 @@
     justify-content: center;
     align-items: center;
     gap: 1.25em;
+
     a {
         text-decoration: none;
     }
+
+    .twitter,
+    .github,
+    .whatsapp,
+    .instagram,
+    .facebook {
+        font-size: 8em;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.432);
+        border-radius: 0.3125rem;
+        width: 2.5rem;
+        margin-top: 0.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        font-size: 1.875em;
+        // animation: animate 3s linear infinite;
+        text-shadow: 0 0 2px #0072ff, 0 0 2px #0072ff, 0 0 2px #0072ff,
+            0 0 2px #0072ff;
+    }
 }
 
-.twitter,
-.github,
-.whatsapp,
-.instagram,
-.facebook {
-    font-size: 8em;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.432);
-    border-radius: 0.3125rem;
-    width: 2.5rem;
-    margin-top: 0.625rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.5rem;
-    font-size: 1.875em;
-    // animation: animate 3s linear infinite;
-    text-shadow: 0 0 2px #0072ff, 0 0 2px #0072ff, 0 0 2px #0072ff,
-        0 0 2px #0072ff;
-}
+
 
 // .twitter {
 //     animation-delay: 0.3s;

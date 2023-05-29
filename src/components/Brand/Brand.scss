@@ -1,27 +1,29 @@
 @import '../../variables';
 
-.brand-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.875em;
-    display: flex;
-    gap: 0.1875em;
-    cursor: pointer;
-}
+.brand-container {
+    .brand-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.875em;
+        display: flex;
+        gap: 0.1875em;
+        cursor: pointer;
 
-.brand-name {
-    color: #fff;
-    font-family: mark-pro-black;
-}
+        .brand-name {
+            color: #fff;
+            font-family: mark-pro-black;
+        }
 
-.brand-lastname {
-    --tw-text-opacity: 1;
-    color: $my-blue;
-    @extend .brand-name;
-}
+        .brand-lastname {
+            --tw-text-opacity: 1;
+            color: $my-blue;
+            @extend .brand-name;
+        }
 
-.portafolio-icon {
-    width: 2.1875em;
-    margin-right: 0.3125em;
+        .portafolio-icon {
+            width: 2.1875em;
+            margin-right: 0.3125em;
+        }
+    }
 }

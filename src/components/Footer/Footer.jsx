@@ -3,7 +3,7 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer>
         <hr/>
         <FooterIcons/>
         <span>© 2022 Alessandro Chiavarino, All rights reserved.</span>

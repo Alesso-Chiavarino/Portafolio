@@ -1,5 +1,5 @@
 import './MagicCard.scss';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 import { BsWhatsapp } from 'react-icons/bs'

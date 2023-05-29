@@ -10,16 +10,16 @@ const ObserverProvider = ({ children }) => {
     const [observeSkills, setObserveSkills] = useState(false);
     const [observeProjects, setObserveProjects] = useState(false);
 
-    const observerA = (validate) => {
-        setObserveAbout(validate);
+    const observerA = (isWatching) => {
+        setObserveAbout(isWatching);
     }
 
-    const observerS = (validate) => {
-        setObserveSkills(validate);
+    const observerS = (isWatching) => {
+        setObserveSkills(isWatching);
     }
 
-    const observerP = (validate) => {
-        setObserveProjects(validate);
+    const observerP = (isWatching) => {
+        setObserveProjects(isWatching);
     }
 
     return (

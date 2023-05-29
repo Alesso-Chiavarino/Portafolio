@@ -1,18 +1,16 @@
 import TypeWriter from '../TypeWriter/TypeWriter';
 import CvBtn from '../CvBtn/CvBtn';
-import './Banner.scss';
 import { useInView } from 'react-intersection-observer';
 import { useObserver } from '../../context/ObserverContext';
 import { useEffect } from 'react';
+import './Banner.scss';
 
 const Banner = () => {
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.5,
   });
-
-
 
   const { observerA } = useObserver()
 

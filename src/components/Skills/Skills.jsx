@@ -90,15 +90,23 @@ const Skills = () => {
         {
             img: "./img/skills/docker.svg",
             name: "Docker"
-        }
+        },
+        {
+            img: "./img/skills/swagger.svg",
+            name: "Swagger"
+        },
+        {
+            img: "./img/skills/jwt.svg",
+            name: "JWT"
+        },
     ]
 
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
         threshold: 0.5,
     });
 
-    const { observerS } =   useObserver()
+    const { observerS } = useObserver()
 
     useEffect(() => {
         inView ? observerS(true) : observerS(false)
