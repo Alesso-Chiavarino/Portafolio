@@ -97,6 +97,63 @@
     }
 }
 
+
+.contact-form-light {
+    @extend .contact-form;
+
+    label {
+        color: #000;
+    }
+
+    .form-name,
+    .form-email {
+
+        input {
+            background-color: transparent !important;
+            box-shadow: none;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            color: #4D515C;
+
+            &::placeholder {
+                color: #93959E;
+            }
+        }
+    }
+
+    .form-message {
+        label {
+            @extend .form-name;
+        }
+
+        textarea {
+            color: #4D515C;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+
+            &::placeholder {
+                color: #93959E;
+            }
+
+            &:focus {
+                border: 1px solid #83AEFB;
+                box-shadow: #83AEFB 0px 0px 3px 0px;
+            }
+        }
+    }
+
+    .btn-submit {
+        color: #fff;
+        background-color: #4f8cff;
+        border: none;
+
+        &:hover {
+            background-color: #83AEFB;
+        }
+    }
+}
+
+
+
 .form-warning {
     color: #fff;
     background-color: #83AEFB;

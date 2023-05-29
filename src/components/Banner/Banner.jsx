@@ -23,7 +23,7 @@ const Banner = () => {
   }, [inView])
 
   return (
-    <div className={isDark ? 'banner-container' : 'banner-container-white'} ref={ref} id="about">
+    <div className={isDark ? 'banner-container' : 'banner-container-light'} ref={ref} id="about">
       <div className="greating-container">
         <h3>Hi, I am</h3>
       </div>

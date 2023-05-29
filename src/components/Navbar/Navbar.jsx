@@ -24,8 +24,12 @@ const Navbar = () => {
             <div className='navbar'>
                 <Brand />
                 <ListContainer linksClass='nav-link-container' isOpen={isOpen} />
-                {open ? <IoCloseSharp className='hamburguer' onClick={() => setOpen(!open)} /> : <RiMenu5Fill className='hamburguer' onClick={() => setOpen(!open)} />}
                 <div className='icons-container'>
+                    {open
+                        ?
+                        <IoCloseSharp className='hamburguer' onClick={() => setOpen(!open)} />
+                        :
+                        <RiMenu5Fill className='hamburguer' onClick={() => setOpen(!open)} />}
                     <Link activeClass="active" to={"contact"} spy={true} smooth={true} offset={-170} duration={900} className="icon-container-message" >
                         <SiGooglemessages />
                     </Link>

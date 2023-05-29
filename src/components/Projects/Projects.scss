@@ -3,6 +3,7 @@
 }
 
 .projects-light {
+    @extend .projects;
     .section-title {
         color: #000;
     }

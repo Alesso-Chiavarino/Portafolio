@@ -161,4 +161,28 @@
         }
     }
 
+    .offcanvas-off {
+        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1685372746/Things/wave_light_dyotrn.svg');
+    }
+
+    .offcanvas {
+        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1685372746/Things/wave_light_dyotrn.svg');
+
+        .icons-container-off {
+
+            .btn-message {
+                background-color: #679CFF;
+                color: #fff;
+
+                &:hover {
+                    background-color: #679cffd0;
+                }
+            }
+
+            .icon-container-message {
+                color: #679CFF !important;
+            }
+        }
+    }
+
 }

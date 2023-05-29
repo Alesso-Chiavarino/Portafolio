@@ -5,9 +5,12 @@ import { useState, useRef } from 'react';
 import { sendMailsRequest } from '../../api/mails/mails.api';
 import { ToastContainer } from 'react-toastify';
 import { generateToast } from '../../utils/toast.utils.js'
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 
 const Form = () => {
+
+  const { isDark } = useTheme()
 
   //value forms
   const [name, setName] = useState('');
@@ -121,12 +124,12 @@ const Form = () => {
 
   return (
     <>
-      <form className='contact-form' onSubmit={handleSubmit}>
+      <form className={isDark ? 'contact-form' : 'contact-form-light'} onSubmit={handleSubmit}>
         <div className='form-name'>
           <label>Your Name</label>
           <span className='form-warning d-none' ref={nameRef} >Write a name</span>
           <input type="text" placeholder="Jhon Doe" name='user_name' onChange={handleName} onKeyUp=
-          {handleName} onBlur={handleName} value={name} ref={inputNameRef} />
+            {handleName} onBlur={handleName} value={name} ref={inputNameRef} />
         </div>
         <div className='form-email'>
           <label>Your Email Adress</label>
@@ -141,8 +144,8 @@ const Form = () => {
           <label>Your Message</label>
           <span className='form-warning2 d-none' ref={messageRef} >Write a message</span>
           <textarea cols="30" rows="10" placeholder='Type a message...' name='message' onChange=
-          {handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref=
-          {inputMessageRef} ></textarea>
+            {handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref=
+            {inputMessageRef} ></textarea>
         </div>
         {loader ? <button className='btn-submit dots-aling'>Submiting <span className='loader'></span>.
         </button> : <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}

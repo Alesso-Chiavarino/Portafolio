@@ -6,7 +6,8 @@
         width: 100% !important;
     }
 
-    .learning {
+    .learning,
+    .learning-light {
         .learning-left-side {
             .learning-github-btn {
                 width: 100% !important;
@@ -16,7 +17,8 @@
 
     //form
 
-    .card-container {
+    .card-container,
+    .card-container-light {
         .card {
             width: 90% !important;
 
@@ -25,7 +27,7 @@
                 height: fit-content;
             }
 
-            .contact-form {
+            .contact-form, .contact-form-light {
                 .btn-submit {
                     margin-top: 35px !important;
                     width: 100%;
@@ -58,7 +60,8 @@
     }
 
     //form
-    .card-container {
+    .card-container,
+    .card-container-light {
         .card {
             margin-bottom: 100px;
         }
@@ -71,12 +74,14 @@
 @media screen and (max-width: 992px) {
 
     //baner
-    .banner-container {
+    .banner-container,
+    .banner-container-light {
         margin-top: 6.25em !important;
     }
 
     //skill
-    .skills-container {
+    .skills-container,
+    .skills-container-light {
         width: 100% !important;
 
         .areas {
@@ -99,7 +104,8 @@
     }
 
     //nav
-    .navbar-container {
+    .navbar-container,
+    .navbar-container-light {
         top: 0 !important;
         // z-index: 454554;
         width: 100% !important;
@@ -124,14 +130,25 @@
             }
 
             .icons-container {
-                display: none !important;
+                .icon-container-message {
+                    display: none;
+                }
+
+                // display: none !important;
             }
+        }
+    }
+
+    .navbar-container-light {
+        .navbar {
+            background-color: #fff !important;
         }
     }
 
     //learning 
 
-    .learning {
+    .learning,
+    .learning-light {
         width: 80% !important;
         flex-direction: column;
 
@@ -173,7 +190,7 @@
             width: 100%;
         }
 
-        .contact-form {
+        .contact-form, .contact-form-light {
 
             input,
             textarea {
@@ -186,7 +203,8 @@
         // }
     }
 
-    .projects {
+    .projects,
+    .projects-light {
         .projects-container {
             grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
         }
@@ -200,7 +218,8 @@
         font-size: 12px !important;
     }
 
-    .projects {
+    .projects,
+    .projects-light {
         .projects-container {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -216,7 +235,7 @@
 
     //form
     .card {
-        .contact-form {
+        .contact-form, .contact-form-light {
             width: 100%;
         }
     }

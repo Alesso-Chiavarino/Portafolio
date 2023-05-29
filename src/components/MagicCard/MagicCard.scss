@@ -64,7 +64,6 @@
         font-family: mark-pro-heavy;
         margin-top: -70px;
         margin-bottom: 20px;
-        // color: #fff;
         font-size: 20px;
         text-align: left;
         color: #c2c2c2;
@@ -104,13 +103,12 @@
           border: 1px solid rgba(255, 255, 255, 0.315);
           border-radius: 5px;
           padding: 6px;
-          // width: 10%;
         }
       }
     }
 
     .contact-form {
-      width: 65%;
+      width: 100%;
 
       h3 {
         font-family: mark-pro-heavy;
@@ -158,15 +156,15 @@
   @extend .card-container;
 
   .card {
-    background: #191c29;
+    background: #F8F8FF;
     color: rgb(88 199 250 / 0%);
 
     .contact-info {
-      background-color: #21232E;
-      box-shadow: 0 4px 6px rgb(9 17 28 / 90%);
+      background-color: #F3F3FF;
+      box-shadow: 0 4px 6px rgb(9 17 28 / 10%);
 
       h3 {
-        color: #c2c2c2;
+        color: #747577;
       }
 
       .card-github,
@@ -175,40 +173,28 @@
       .card-whatsapp {
 
         .network {
-          color: #838383;
+          color: #93959E;
 
           .link-network {
-            color: #fff;
+            color: #1A202B;
 
             &:hover {
-              color: #83AEFB;
+              color: #4998ff;
             }
           }
         }
 
         .contact-icon {
           color: #83AEFB !important;
-          border: 1px solid rgba(255, 255, 255, 0.315);
+          border: 1px solid rgba(0, 0, 0, 0.181);
         }
       }
     }
 
     .contact-form {
       h3 {
-        color: $my-blue;
+        color: #83AEFB;
       }
     }
-  }
-
-  .card::before {
-    content: "";
-    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-  }
-
-  .card::after {
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-    transition: opacity .5s;
   }
 }
