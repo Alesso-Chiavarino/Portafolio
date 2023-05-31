@@ -1,5 +1,7 @@
-//hooks
-import { useEffect, useState, useRef } from "react";
+//react
+import { useState, useEffect, useRef, createContext, useContext } from "react";
+//app
+import App from "../App.jsx";
 //components
 import CvBtn from "../components/CvBtn/CvBtn.jsx";
 import TypeWriter from "../components/TypeWriter/TypeWriter.jsx";
@@ -14,9 +16,16 @@ import Project from "../components/Project/Project.jsx";
 import Learning from "../components/Learning/Learning.jsx";
 import TecnologiesCarousel from "../components/TecnologiesCarousel/TecnologiesCarousel.jsx";
 import Technology from "../components/Technology/Technology.jsx";
+import Banner from "../components/Banner/Banner.jsx";
+import CertificatesContainer from "../components/CertificatesContainer/CertificatesContainer.jsx";
+import Contact from "../components/Contact/Contact.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import Navbar from "../components/Navbar/Navbar.jsx";
+import Projects from "../components/Projects/Projects.jsx";
+import Skills from "../components/Skills/Skills.jsx";
 //context
-import { useObserver } from '../context/ObserverContext.jsx';
-import { useTheme } from '../context/ThemeContext.jsx';
+import ObserverProvider, { useObserver } from '../context/ObserverContext.jsx';
+import ThemeProvider, { useTheme } from '../context/ThemeContext.jsx';
 import { useInView } from "react-intersection-observer";
 //scroll
 import { Link } from 'react-scroll'
@@ -40,13 +49,18 @@ import Carousel from "react-multi-carousel";
 //api
 import { sendMailsRequest } from "../api/mails/mails.api.js";
 //modules
+import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import { Typewriter } from 'react-simple-typewriter'
+import axios from 'axios';
 //utils
 import { generateToast } from "../utils/toast.utils.js";
-
+//config
+import { ENV } from "./env.config.js";
 
 export {
+    //app
+    App,
     //components
     CvBtn,
     TypeWriter,
@@ -61,15 +75,26 @@ export {
     Learning,
     TecnologiesCarousel,
     Technology,
+    Banner,
+    CertificatesContainer,
+    Contact,
+    Footer,
+    Navbar,
+    Projects,
+    Skills,
     //context
     useObserver,
     useTheme,
+    ObserverProvider,
+    ThemeProvider,
     //obeserver
     useInView,
-    //hooks
+    //react
     useEffect,
     useState,
     useRef,
+    createContext,
+    useContext,
     //scroll
     Link,
     //react icons
@@ -96,8 +121,12 @@ export {
     Carousel,
     ToastContainer,
     Typewriter,
+    axios,
+    toast,
     //api
     sendMailsRequest,
     //utils 
     generateToast,
+    //config
+    ENV,
 }

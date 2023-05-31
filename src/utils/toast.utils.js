@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+import { toast } from "../config/import.config";
 
 export const generateToast = (type = 'success', message = 'No message') => {
     switch (type) {

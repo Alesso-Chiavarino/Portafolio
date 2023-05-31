@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { ENV } from '../../config/env.config.js';
+import { axios } from '../../config/import.config.js'
+import { ENV } from "../../config/env.config.js"
 
 const { PROD: { API_URL } } = ENV
 

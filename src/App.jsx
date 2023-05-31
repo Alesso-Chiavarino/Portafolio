@@ -1,14 +1,6 @@
+import { Banner, CertificatesContainer, Contact, Footer, Navbar, Projects, Skills, ObserverProvider, ThemeProvider, useTheme } from './config/import.config.js'
 import './App.css';
 import './responsive.scss';
-import Banner from './components/Banner/Banner'
-import CertificatesContainer from './components/CertificatesContainer/CertificatesContainer'
-import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
-import ObserverProvider from './context/ObserverContext'
-import ThemeProvider, { useTheme } from './context/ThemeContext.jsx';
 
 const App = () => {
 
