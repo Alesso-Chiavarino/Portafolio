@@ -1,11 +1,5 @@
-import Learning from '../Learning/Learning';
-import TecnologiesCarousel from '../TecnologiesCarousel/TecnologiesCarousel';
+import { Learning, TecnologiesCarousel, useInView, useObserver, useEffect, backTechnologies, frontTechnologies, useTheme } from '../../config/import.config.js'
 import './Skills.scss';
-import { useInView } from 'react-intersection-observer';
-import { useObserver } from '../../context/ObserverContext';
-import { useEffect } from 'react';
-import { backTechnologies, frontTechnologies } from '../../data/technologies.js';
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Skills = () => {
 

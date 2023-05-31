@@ -1,10 +1,5 @@
+import { AiFillGithub, FaLinkedinIn, SiGmail, BsWhatsapp, Form, useTheme } from '../../config/import.config.js'
 import './MagicCard.scss';
-import { AiFillGithub } from 'react-icons/ai'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { SiGmail } from 'react-icons/si'
-import { BsWhatsapp } from 'react-icons/bs'
-import Form from '../Form/Form';
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const MagicCard = () => {
 

@@ -1,13 +1,5 @@
-import ListContainer from '../ListContainer/ListContainer';
-import Brand from '../Brand/Brand';
-import { BsSunFill, BsMoonFill } from 'react-icons/bs'
-import { SiGooglemessages } from 'react-icons/si'
+import { ListContainer, Brand, BsSunFill, BsMoonFill, SiGooglemessages, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config.js'
 import './Navbar.scss';
-import { Link } from 'react-scroll'
-import { RiMenu5Fill } from 'react-icons/ri'
-import { useState } from 'react'
-import { IoCloseSharp } from 'react-icons/io5'
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Navbar = () => {
 

@@ -1,7 +1,5 @@
+import { TbFileCertificate, MdWatchLater, useTheme } from '../../config/import.config.js'
 import './Certificate.scss';
-import { TbFileCertificate } from 'react-icons/tb'
-import { MdWatchLater } from 'react-icons/md'
-import { useTheme } from '../../context/ThemeContext';
 
 const Certificate = ({ img, course, academy, date, description, certificate }) => {
 

@@ -1,6 +1,5 @@
+import { FiDownload, useTheme } from '../../config/import.config.js'
 import './CvBtn.scss';
-import { FiDownload } from 'react-icons/fi'
-import { useTheme } from '../../context/ThemeContext';
 
 const CvBtn = () => {
 

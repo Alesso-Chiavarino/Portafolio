@@ -1,18 +1,18 @@
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from '../../config/import.config.js'
 
 const TypeWriter = () => {
 
   return (
-          <Typewriter
-            sty
-            words={['Front end Developer', 'Backend Developer', 'Full Stack Developer']}
-            loop={Infinity}
-            cursor
-            cursorStyle='|'
-            typeSpeed={100}
-            deleteSpeed={50}
-            delaySpeed={2000}
-          />
+    <Typewriter
+      sty
+      words={['Front end Developer', 'Backend Developer', 'Full Stack Developer']}
+      loop={Infinity}
+      cursor
+      cursorStyle='|'
+      typeSpeed={100}
+      deleteSpeed={50}
+      delaySpeed={2000}
+    />
   )
 
 }

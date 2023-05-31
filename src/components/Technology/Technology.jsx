@@ -1,4 +1,4 @@
-import { useTheme } from '../../context/ThemeContext.jsx';
+import { useTheme } from '../../config/import.config.js';
 import './Technology.scss';
 
 const Technology = ({ img, name }) => {

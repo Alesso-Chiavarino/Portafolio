@@ -1,9 +1,5 @@
-import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
+import { ProjectsContainer, useInView, useObserver, useEffect, useTheme } from '../../config/import.config.js'
 import './Projects.scss';
-import { useInView } from 'react-intersection-observer';
-import { useObserver } from '../../context/ObserverContext';
-import { useEffect } from 'react';
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Projects = () => {
 

@@ -146,4 +146,25 @@ export const projects = [
             },
         ],
     },
+    {
+        img: "./img/outfitx-api.png",
+        name: "Outfitx REST API",
+        description: "Ecommerce REST API",
+        git: "https://github.com/Alesso-Chiavarino/Outfitx",
+        deploy: "denied",
+        tech: [
+            {
+                name: "Express.js",
+            },
+            {
+                name: "Mongo DB",
+            },
+            {
+                name: "Mocha.js",
+            },
+            {
+                name: "Swagger",
+            },
+        ],
+    },
 ]

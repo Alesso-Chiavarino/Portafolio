@@ -1,12 +1,6 @@
+import { RiSendPlaneFill, useState, useRef, sendMailsRequest, ToastContainer, generateToast, useTheme } from '../../config/import.config.js'
 import './Form.scss';
 import 'react-toastify/dist/ReactToastify.css';
-import { RiSendPlaneFill } from 'react-icons/ri'
-import { useState, useRef } from 'react';
-import { sendMailsRequest } from '../../api/mails/mails.api';
-import { ToastContainer } from 'react-toastify';
-import { generateToast } from '../../utils/toast.utils.js'
-import { useTheme } from '../../context/ThemeContext.jsx';
-
 
 const Form = () => {
 

@@ -1,6 +1,5 @@
-import { useTheme } from '../../context/ThemeContext.jsx';
+import { useTheme, AiFillGithub } from '../../config/import.config.js'
 import './Learning.scss';
-import { AiFillGithub } from 'react-icons/ai'
 
 const Learning = () => {
 

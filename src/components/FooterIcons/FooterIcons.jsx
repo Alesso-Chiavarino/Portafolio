@@ -1,5 +1,5 @@
 import './FooterIcons.scss';
-import { useTheme } from '../../context/ThemeContext';
+import { useTheme } from '../../config/import.config.js';
 
 const FooterIcons = () => {
 

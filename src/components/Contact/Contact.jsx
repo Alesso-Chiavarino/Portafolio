@@ -1,6 +1,4 @@
-import React from 'react'
-import MagicCard from '../MagicCard/MagicCard'
-import { useTheme } from '../../context/ThemeContext.jsx'
+import { MagicCard, useTheme } from '../../config/import.config.js'
 import './Contact.scss';
 
 const Contact = () => {

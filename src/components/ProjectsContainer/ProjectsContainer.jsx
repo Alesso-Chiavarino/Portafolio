@@ -1,5 +1,4 @@
-import { projects } from '../../data/projects.js';
-import Project from '../Project/Project';
+import { projects, Project } from '../../config/import.config.js'
 import './ProjectsContainer.scss';
 
 const ProjectsContainer = () => {

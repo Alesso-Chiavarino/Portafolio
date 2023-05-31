@@ -1,10 +1,5 @@
-import TypeWriter from '../TypeWriter/TypeWriter';
-import CvBtn from '../CvBtn/CvBtn';
-import { useInView } from 'react-intersection-observer';
-import { useObserver } from '../../context/ObserverContext';
-import { useEffect } from 'react';
+import { TypeWriter, CvBtn, useObserver, useTheme, useEffect, useInView } from '../../config/import.config.js'
 import './Banner.scss';
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 
 const Banner = () => {

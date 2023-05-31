@@ -1,7 +1,7 @@
-import Carousel from "react-multi-carousel";
+import { Carousel, Technology } from '../../config/import.config.js'
 import "react-multi-carousel/lib/styles.css";
-import Technology from '../Technology/Technology';
 import './TecnologiesCarousel.scss';
+
 
 const responsive = {
     superLargeDesktop: {

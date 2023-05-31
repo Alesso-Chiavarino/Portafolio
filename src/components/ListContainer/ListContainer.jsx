@@ -1,7 +1,5 @@
+import { useObserver, Link, useTheme } from '../../config/import.config.js'
 import './ListContainer.scss';
-import { useObserver } from '../../context/ObserverContext';
-import { Link } from 'react-scroll'
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const ListContainer = ({ linksClass, isOpen }) => {
 

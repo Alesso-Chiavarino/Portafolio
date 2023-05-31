@@ -1,8 +1,5 @@
+import { AiFillGithub, IoMdRocket, generateToast, useTheme } from '../../config/import.config.js'
 import './Project.scss';
-import { AiFillGithub } from 'react-icons/ai'
-import { IoMdRocket } from 'react-icons/io'
-import { generateToast } from '../../utils/toast.utils.js';
-import { useTheme } from '../../context/ThemeContext.jsx';
 
 const Project = ({ name, tech, description, img, git, deploy }) => {
 

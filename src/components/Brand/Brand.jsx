@@ -1,6 +1,5 @@
-import { useTheme } from '../../context/ThemeContext.jsx';
+import { useTheme, Link } from '../../config/import.config.js'
 import './Brand.scss';
-import { Link } from 'react-scroll'
 
 const Brand = () => {
 

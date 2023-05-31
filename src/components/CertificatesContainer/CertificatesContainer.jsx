@@ -1,8 +1,4 @@
-import { useTheme } from '../../context/ThemeContext.jsx';
-import { certificates } from '../../data/certificates.js';
-import Certificate from '../Certificate/Certificate';
-import './CertificatesContainer.scss';
-import Carousel from "react-multi-carousel";
+import { useTheme, certificates, Certificate, Carousel } from '../../config/import.config.js'
 import "react-multi-carousel/lib/styles.css";
 
 const CertificatesContainer = () => {
