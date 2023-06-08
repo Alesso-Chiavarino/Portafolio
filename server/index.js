@@ -11,7 +11,7 @@ const serverUri = `http://localhost:${PORT}`
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://portafolio-alessandro-chiavarino.vercel.app/']
+    origin: ['http://localhost:5173', 'https://alessochiavarino.vercel.app/']
 }));
 app.use('/api', appRoutes);
 

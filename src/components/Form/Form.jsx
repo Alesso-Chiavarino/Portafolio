@@ -141,8 +141,11 @@ const Form = () => {
             {handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref=
             {inputMessageRef} ></textarea>
         </div>
-        {loader ? <button className='btn-submit dots-aling'>Submiting <span className='loader'></span>.
-        </button> : <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
+        {loader?
+          <button className='btn-submit dots-aling'>Submiting <span className='loader'></span>
+          </button>
+          :
+          <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
 
       </form>
       <ToastContainer />
