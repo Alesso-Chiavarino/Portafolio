@@ -5,7 +5,7 @@ const Project = ({ name, tech, description, img, git, deploy }) => {
 
   const { isDark } = useTheme()
 
-  const checkPermission = (e) => {
+  const checkPermission = () => {
     generateToast('error', 'Deploy not available, you need to contact me to get permission');
   }
 

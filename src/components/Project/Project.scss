@@ -12,7 +12,7 @@
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transition: 0.5s all;
-        transform: scale(1.02);
+        animation: project-animation 1.5s infinite alternate;
     }
 
     .project-img-container {
@@ -117,4 +117,14 @@
         color: #4D515C;
     }
 
+}
+
+@keyframes project-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.02);
+    }
 }
