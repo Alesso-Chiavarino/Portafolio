@@ -1,4 +1,4 @@
-import { RiSendPlaneFill, useState, useRef, sendMailsRequest, ToastContainer, generateToast, useTheme } from '../../config/import.config.js'
+import { RiSendPlaneFill, useState, useRef, sendMailsRequest, ToastContainer, generateToast, useTheme } from '../../config/import.config'
 import './Form.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -7,14 +7,14 @@ const Form = () => {
   const { isDark } = useTheme()
 
   //value forms
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
   //validations
-  const [nameVal, setNameVal] = useState(false);
-  const [emailVal, setEmailVal] = useState(false);
-  const [messageVal, setMessageVal] = useState(false);
+  const [nameVal, setNameVal] = useState<boolean>(false);
+  const [emailVal, setEmailVal] = useState<boolean>(false);
+  const [messageVal, setMessageVal] = useState<boolean>(false);
 
   //regular expressions
   const expressions = {
@@ -23,16 +23,16 @@ const Form = () => {
   }
 
   //refs
-  const nameRef = useRef()
-  const emailRef = useRef()
-  const messageRef = useRef()
-  const inputNameRef = useRef()
-  const inputEmailRef = useRef()
-  const inputMessageRef = useRef()
+  const nameRef = useRef<HTMLSpanElement>(null)
+  const emailRef = useRef<HTMLSpanElement>(null)
+  const messageRef = useRef<HTMLSpanElement>(null)
+  const inputNameRef = useRef<HTMLInputElement>(null)
+  const inputEmailRef = useRef<HTMLInputElement>(null)
+  const inputMessageRef = useRef<HTMLTextAreaElement>(null)
 
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let isRequestSuccessful = false;
     try {
@@ -45,17 +45,14 @@ const Form = () => {
         })
         isRequestSuccessful = true
       } else {
-        if (!nameVal) {
+        if (!nameVal && nameRef.current) {
           nameRef.current.className = "form-warning"
-          // inputNameRef.current.focus();
         }
-        if (!emailVal) {
+        if (!emailVal && emailRef.current) {
           emailRef.current.className = "form-warning"
-          // inputEmailRef.current.focus();
         }
-        if (!messageVal) {
+        if (!messageVal && messageRef.current) {
           messageRef.current.className = "form-warning2"
-          // inputMessageRef.current.focus();
         }
         return;
       }
@@ -82,36 +79,36 @@ const Form = () => {
     }
   }
 
-  const handleName = (e) => {
-    setName(e.target.value);
+  const handleName = (e: React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    setName(e.currentTarget.value);
     if (expressions.name.test(name)) {
       setNameVal(true);
-      nameRef.current.className = "d-none"
+      nameRef.current && (nameRef.current.className = "d-none")
     } else {
       setNameVal(false);
-      nameRef.current.className = "form-warning"
+      nameRef.current && (nameRef.current.className = "form-warning")
     }
   }
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    setEmail(e.currentTarget.value);
     if (expressions.email.test(email)) {
       setEmailVal(true);
-      emailRef.current.className = "d-none"
+      emailRef.current && (emailRef.current.className = "d-none")
     } else {
       setEmailVal(false);
-      emailRef.current.className = "form-warning"
+      emailRef.current && (emailRef.current.className = "form-warning")
     }
   }
 
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
+  const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement> | React.KeyboardEvent<HTMLTextAreaElement>) => {
+    setMessage(e.currentTarget.value);
     if (message !== "") {
       setMessageVal(true);
-      messageRef.current.className = "d-none"
+      messageRef.current && (messageRef.current.className = "d-none")
     } else {
       setMessageVal(false);
-      messageRef.current.className = "form-warning2"
+      messageRef.current && (messageRef.current.className = "form-warning2")
     }
   }
 
@@ -122,14 +119,13 @@ const Form = () => {
         <div className='form-name'>
           <label>Your Name</label>
           <span className='form-warning d-none' ref={nameRef} >Write a name</span>
-          <input type="text" placeholder="Jhon Doe" name='user_name' onChange={handleName} onKeyUp=
-            {handleName} onBlur={handleName} value={name} ref={inputNameRef} />
+          <input type="text" placeholder="Jhon Doe" name='user_name' onKeyUp={handleName} onChange={handleName} onBlur={handleName} value={name} ref={inputNameRef} />
         </div>
         <div className='form-email'>
           <label>Your Email Adress</label>
           <span className='form-warning d-none' ref={emailRef} >Enter a correct email</span>
-          <input type="text" placeholder="JhonDoe@gmail.com" name='user_email' onChange={handleEmail}
-            onKeyUp={handleEmail} onBlur={handleEmail} value={email} ref={inputEmailRef} />
+          <input type="text" onKeyUp={handleEmail} placeholder="JhonDoe@gmail.com" name='user_email' onChange={handleEmail}
+            onBlur={handleEmail} value={email} ref={inputEmailRef} />
         </div>
         section
         <span className='loader-40'></span>
@@ -137,11 +133,11 @@ const Form = () => {
         <div className="form-message">
           <label>Your Message</label>
           <span className='form-warning2 d-none' ref={messageRef} >Write a message</span>
-          <textarea cols="30" rows="10" placeholder='Type a message...' name='message' onChange=
-            {handleMessage} onKeyUp={handleMessage} onBlur={handleMessage} value={message} ref=
+          <textarea cols={30} rows={10} onKeyUp={handleMessage} placeholder='Type a message...' name='message' onChange=
+            {handleMessage} onBlur={handleMessage} value={message} ref=
             {inputMessageRef} ></textarea>
         </div>
-        {loader?
+        {loader ?
           <button className='btn-submit dots-aling'>Submiting <span className='loader'></span>
           </button>
           :

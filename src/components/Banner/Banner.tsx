@@ -1,4 +1,4 @@
-import { TypeWriter, CvBtn, useObserver, useTheme, useEffect, useInView } from '../../config/import.config.js'
+import { TypeWriter, CvBtn, useObserver, useTheme, useEffect, useInView } from '../../config/import.config'
 import './Banner.scss';
 
 

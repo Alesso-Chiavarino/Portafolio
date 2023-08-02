@@ -1,4 +1,4 @@
-import { MagicCard, useTheme } from '../../config/import.config.js'
+import { MagicCard, useTheme } from '../../config/import.config'
 import './Contact.scss';
 
 const Contact = () => {

@@ -1,4 +1,4 @@
-import { useTheme, certificates, Certificate, Carousel } from '../../config/import.config.js'
+import { useTheme, certificates, Certificate, Carousel } from '../../config/import.config'
 import "react-multi-carousel/lib/styles.css";
 
 const CertificatesContainer = () => {

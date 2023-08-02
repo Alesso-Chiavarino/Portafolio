@@ -1,4 +1,4 @@
-import { Learning, TecnologiesCarousel, useInView, useObserver, useEffect, backTechnologies, frontTechnologies, useTheme } from '../../config/import.config.js'
+import { Learning, TechnologiesCarousel, useInView, useObserver, useEffect, backTechnologies, frontTechnologies, useTheme } from '../../config/import.config'
 import './Skills.scss';
 
 const Skills = () => {
@@ -23,11 +23,11 @@ const Skills = () => {
                 <div className="areas">
                     <div className="front-end">
                         <span className='area-span'>Front End</span>
-                        <TecnologiesCarousel frontTechnologies={frontTechnologies} className="tecnologies-carousel" />
+                        <TechnologiesCarousel frontTechnologies={frontTechnologies} className="tecnologies-carousel" />
                     </div>
                     <div className="back-end">
                         <span className='area-span'>Back End</span>
-                        <TecnologiesCarousel backTechnologies={backTechnologies} className="tecnologies-carousel" />
+                        <TechnologiesCarousel backTechnologies={backTechnologies} className="tecnologies-carousel" />
                     </div>
                 </div>
                 <Learning />

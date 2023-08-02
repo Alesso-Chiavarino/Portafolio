@@ -1,7 +1,12 @@
-import { useObserver, Link, useTheme } from '../../config/import.config.js'
+import { useObserver, Link, useTheme } from '../../config/import.config'
 import './ListContainer.scss';
 
-const ListContainer = ({ linksClass, isOpen }) => {
+interface ListContainerProps {
+    linksClass: string,
+    isOpen: (data: boolean) => void
+}
+
+const ListContainer = ({ linksClass, isOpen }: ListContainerProps) => {
 
     const { isDark } = useTheme()
 

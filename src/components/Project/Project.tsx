@@ -1,7 +1,16 @@
-import { AiFillGithub, IoMdRocket, generateToast, useTheme } from '../../config/import.config.js'
+import { AiFillGithub, IoMdRocket, generateToast, useTheme } from '../../config/import.config'
 import './Project.scss';
 
-const Project = ({ name, tech, description, img, git, deploy }) => {
+interface ProjectProps {
+  name: string,
+  tech: { name: string }[],
+  description: string,
+  img: string,
+  git: string,
+  deploy: string
+}
+
+const Project = ({ name, tech, description, img, git, deploy }: ProjectProps) => {
 
   const { isDark } = useTheme()
 

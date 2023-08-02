@@ -1,7 +1,13 @@
-import { useTheme } from '../../config/import.config.js';
+import { useTheme } from '../../config/import.config';
 import './Technology.scss';
 
-const Technology = ({ img, name }) => {
+interface TechnologyProps {
+  img: string,
+  name: string,
+  key?: number
+}
+
+const Technology = ({ img, name }: TechnologyProps) => {
 
   const { isDark } = useTheme()
 

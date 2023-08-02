@@ -1,7 +1,13 @@
-import { Carousel, Technology } from '../../config/import.config.js'
+import { Carousel, Technology } from '../../config/import.config'
 import "react-multi-carousel/lib/styles.css";
 import './TecnologiesCarousel.scss';
+import { Technologies, Technology as TechnolgyType } from '@/types/Technologies';
 
+interface TechnologiesCarouselProps {
+    frontTechnologies?: Technologies,
+    backTechnologies?: Technologies,
+    className?: string
+}
 
 const responsive = {
     superLargeDesktop: {
@@ -22,7 +28,7 @@ const responsive = {
     }
 };
 
-const TecnologiesCarousel = ({ frontTechnologies, backTechnologies }) => {
+const TechnologiesCarousel = ({ frontTechnologies, backTechnologies }: TechnologiesCarouselProps) => {
     return (
         <Carousel
             className="technologies-slider"
@@ -40,13 +46,13 @@ const TecnologiesCarousel = ({ frontTechnologies, backTechnologies }) => {
             keyBoardControl={true}
             transitionDuration={500}
         >
-            {frontTechnologies ? frontTechnologies.map(((tec, i) => {
-                return <Technology key={i} {...tec} />
-            })) : backTechnologies.map(((tec, i) => {
+            {frontTechnologies ? frontTechnologies.map(((tec: TechnolgyType, i: number) => {
+                return <Technology key={i} img={tec.img} name={tec.name} />
+            })) : backTechnologies?.map(((tec, i) => {
                 return <Technology key={i} {...tec} />
             }))}
         </Carousel>
     )
 }
 
-export default TecnologiesCarousel
+export default TechnologiesCarousel

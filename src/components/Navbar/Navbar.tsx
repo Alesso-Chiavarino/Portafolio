@@ -1,4 +1,4 @@
-import { ListContainer, Brand, BsSunFill, BsMoonFill, SiGooglemessages, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config.js'
+import { ListContainer, Brand, BsSunFill, BsMoonFill, SiGooglemessages, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config'
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false)
 
-    const isOpen = (data) => {
+    const isOpen = (data: boolean) => {
         setOpen(data)
     }
 

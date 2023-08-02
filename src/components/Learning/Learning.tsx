@@ -1,4 +1,4 @@
-import { useTheme, AiFillGithub } from '../../config/import.config.js'
+import { useTheme, AiFillGithub } from '../../config/import.config'
 import './Learning.scss';
 
 const Learning = () => {

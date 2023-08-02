@@ -1,31 +1,31 @@
 //react
 import { useState, useEffect, useRef, createContext, useContext } from "react";
 //app
-import App from "../App.jsx";
+import App from "../App.tsx";
 //components
-import CvBtn from "../components/CvBtn/CvBtn.jsx";
-import TypeWriter from "../components/TypeWriter/TypeWriter.jsx";
-import Certificate from "../components/Certificate/Certificate.jsx";
-import MagicCard from "../components/MagicCard/MagicCard.jsx";
-import FooterIcons from "../components/FooterIcons/FooterIcons.jsx";
-import Form from "../components/Form/Form.jsx";
-import ListContainer from "../components/ListContainer/ListContainer.jsx";
-import Brand from "../components/Brand/Brand.jsx";
-import ProjectsContainer from "../components/ProjectsContainer/ProjectsContainer.jsx";
-import Project from "../components/Project/Project.jsx";
-import Learning from "../components/Learning/Learning.jsx";
-import TecnologiesCarousel from "../components/TecnologiesCarousel/TecnologiesCarousel.jsx";
-import Technology from "../components/Technology/Technology.jsx";
-import Banner from "../components/Banner/Banner.jsx";
-import CertificatesContainer from "../components/CertificatesContainer/CertificatesContainer.jsx";
-import Contact from "../components/Contact/Contact.jsx";
-import Footer from "../components/Footer/Footer.jsx";
-import Navbar from "../components/Navbar/Navbar.jsx";
-import Projects from "../components/Projects/Projects.jsx";
-import Skills from "../components/Skills/Skills.jsx";
+import CvBtn from "../components/CvBtn/CvBtn.tsx";
+import TypeWriter from "../components/TypeWriter/TypeWriter.tsx";
+import Certificate from "../components/Certificate/Certificate.tsx";
+import MagicCard from "../components/MagicCard/MagicCard.tsx";
+import FooterIcons from "../components/FooterIcons/FooterIcons.tsx";
+import Form from "../components/Form/Form.tsx";
+import ListContainer from "../components/ListContainer/ListContainer.tsx";
+import Brand from "../components/Brand/Brand.tsx";
+import ProjectsContainer from "../components/ProjectsContainer/ProjectsContainer.tsx";
+import Project from "../components/Project/Project.tsx";
+import Learning from "../components/Learning/Learning.tsx";
+import TechnologiesCarousel from "../components/TechnologiesCarousel/TechnologiesCarousel.tsx";
+import Technology from "../components/Technology/Technology.tsx";
+import Banner from "../components/Banner/Banner.tsx";
+import CertificatesContainer from "../components/CertificatesContainer/CertificatesContainer.tsx";
+import Contact from "../components/Contact/Contact.tsx";
+import Footer from "../components/Footer/Footer.tsx";
+import Navbar from "../components/Navbar/Navbar.tsx";
+import Projects from "../components/Projects/Projects.tsx";
+import Skills from "../components/Skills/Skills.tsx";
 //context
-import ObserverProvider, { useObserver } from '../context/ObserverContext.jsx';
-import ThemeProvider, { useTheme } from '../context/ThemeContext.jsx';
+import ObserverProvider, { useObserver } from '../context/ObserverContext.tsx';
+import ThemeProvider, { useTheme } from '../context/ThemeContext.tsx';
 import { useInView } from "react-intersection-observer";
 //scroll
 import { Link } from 'react-scroll'
@@ -41,22 +41,22 @@ import { BsWhatsapp, BsSunFill, BsMoonFill } from 'react-icons/bs'
 import { IoCloseSharp } from 'react-icons/io5'
 import { IoMdRocket } from 'react-icons/io'
 //data
-import { certificates } from "../data/certificates.js";
-import { projects } from "../data/projects.js";
-import { backTechnologies, frontTechnologies } from "../data/technologies.js";
+import { certificates } from "../data/certificates.ts";
+import { projects } from "../data/projects.ts";
+import { backTechnologies, frontTechnologies } from "../data/technologies.ts";
 //react multi carousel
 import Carousel from "react-multi-carousel";
 //api
-import { sendMailsRequest } from "../api/mails/mails.api.js";
+import { sendMailsRequest } from "../api/mails/mails.api.ts";
 //modules
 import { toast } from "react-toastify";
 import { ToastContainer } from 'react-toastify';
 import { Typewriter } from 'react-simple-typewriter'
 import axios from 'axios';
 //utils
-import { generateToast } from "../utils/toast.utils.js";
+import { generateToast } from "../utils/toast.utils.ts";
 //config
-import { ENV } from "./env.config.js";
+import { ENV } from "./env.config.ts";
 
 export {
     //app
@@ -73,7 +73,7 @@ export {
     ProjectsContainer,
     Project,
     Learning,
-    TecnologiesCarousel,
+    TechnologiesCarousel,
     Technology,
     Banner,
     CertificatesContainer,

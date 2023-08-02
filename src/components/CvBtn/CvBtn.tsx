@@ -1,4 +1,4 @@
-import { FiDownload, useTheme } from '../../config/import.config.js'
+import { FiDownload, useTheme } from '../../config/import.config'
 import './CvBtn.scss';
 
 const CvBtn = () => {

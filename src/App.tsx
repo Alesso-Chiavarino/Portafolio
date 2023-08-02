@@ -1,4 +1,4 @@
-import { Banner, CertificatesContainer, Contact, Footer, Navbar, Projects, Skills, ObserverProvider, ThemeProvider, useTheme } from './config/import.config.js'
+import { Banner, CertificatesContainer, Contact, Footer, Navbar, Projects, Skills, ObserverProvider, ThemeProvider, useTheme } from './config/import.config'
 import './App.css';
 import './responsive.scss';
 

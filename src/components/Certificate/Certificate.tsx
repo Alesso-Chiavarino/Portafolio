@@ -1,7 +1,16 @@
 import { TbFileCertificate, MdWatchLater, useTheme } from '../../config/import.config.js'
 import './Certificate.scss';
 
-const Certificate = ({ img, course, academy, date, description, certificate }) => {
+interface CertificateProps {
+    img: string,
+    course: string,
+    academy: string,
+    date: string,
+    description: string,
+    certificate: string
+}
+
+const Certificate = ({ img, course, academy, date, description, certificate }: CertificateProps) => {
 
     const { isDark } = useTheme()
 

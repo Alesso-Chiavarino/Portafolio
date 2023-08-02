@@ -1,4 +1,4 @@
-import { AiFillGithub, FaLinkedinIn, SiGmail, BsWhatsapp, Form, useTheme } from '../../config/import.config.js'
+import { AiFillGithub, FaLinkedinIn, SiGmail, BsWhatsapp, Form, useTheme } from '../../config/import.config'
 import './MagicCard.scss';
 
 const MagicCard = () => {

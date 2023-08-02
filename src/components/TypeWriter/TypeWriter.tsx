@@ -1,10 +1,9 @@
-import { Typewriter } from '../../config/import.config.js'
+import { Typewriter } from '../../config/import.config'
 
 const TypeWriter = () => {
 
   return (
     <Typewriter
-      sty
       words={['Front end Developer', 'Backend Developer', 'Full Stack Developer']}
       loop={Infinity}
       cursor

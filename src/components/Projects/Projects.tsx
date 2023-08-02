@@ -1,4 +1,4 @@
-import { ProjectsContainer, useInView, useObserver, useEffect, useTheme } from '../../config/import.config.js'
+import { ProjectsContainer, useInView, useObserver, useEffect, useTheme } from '../../config/import.config'
 import './Projects.scss';
 
 const Projects = () => {

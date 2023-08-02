@@ -91,6 +91,9 @@ export const projects = [
                 name: "React",
             },
             {
+                name: "TypeScript"
+            },
+            {
                 name: "Vite",
             },
             {

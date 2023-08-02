@@ -1,4 +1,6 @@
-export const frontTechnologies = [
+import { Technologies } from "@/types/Technologies"
+
+export const frontTechnologies: Technologies = [
     {
         img: "./img/skills/html.svg",
         name: "HTML",
@@ -12,12 +14,20 @@ export const frontTechnologies = [
         name: "JavaScript",
     },
     {
+        img: "./img/skills/typescript.svg",
+        name: "TypeScript",
+    },
+    {
         img: "./img/skills/react.svg",
         name: "React",
     },
     {
         img: "./img/skills/redux.svg",
         name: "Redux",
+    },
+    {
+        img: "./img/skills/vitest.svg",
+        name: "Vitest",
     },
     {
         img: "./img/skills/bootstrap.svg",
@@ -41,7 +51,7 @@ export const frontTechnologies = [
     },
 ]
 
-export const backTechnologies = [
+export const backTechnologies: Technologies = [
     {
         img: "./img/skills/node.svg",
         name: "Node.js"
