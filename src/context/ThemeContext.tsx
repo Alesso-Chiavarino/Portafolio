@@ -26,7 +26,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         } else {
             setIsDark(JSON.parse(storedTheme))
         }
-    }, [])
+    }, [isDark])
 
     return (
         <ThemeContext.Provider value={{ isDark, toggleTheme }} >

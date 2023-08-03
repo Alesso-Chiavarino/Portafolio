@@ -131,7 +131,7 @@ export const projects = [
     {
         img: "./img/devitools.png",
         name: "Devitools",
-        description: "Web app to save developers time. Developed with Next.js.",
+        description: "Web app to save developers time. Using IA to integrate bot assistant using cohere API.",
         git: "https://github.com/Alesso-Chiavarino/devitools",
         deploy: "https://devitools.vercel.app",
         tech: [

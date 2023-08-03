@@ -1,7 +1,6 @@
 import { createContext } from 'react';
 import { useState, useContext } from '../config/import.config.js'
 
-
 interface ObserverContext {
     observerA: (isWatching: boolean) => void,
     observerS: (isWatching: boolean) => void,

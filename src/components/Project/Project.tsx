@@ -20,9 +20,11 @@ const Project = ({ name, tech, description, img, git, deploy }: ProjectProps) =>
 
   return (
     <article className={isDark ? 'project' : 'project-light'}>
-      <div className="project-img-container">
-        <img className='project-img' src={img} alt={name} />
-      </div>
+      <a target='_blank' href={deploy}>
+        <div className="project-img-container">
+          <img className='project-img' src={img} alt={name} />
+        </div>
+      </a>
       <div className="project-info1">
         <h3>{name}</h3>
         <div className="project-icon-links">

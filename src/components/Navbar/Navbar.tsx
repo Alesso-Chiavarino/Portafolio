@@ -1,4 +1,5 @@
 import { ListContainer, Brand, BsSunFill, BsMoonFill, SiGooglemessages, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config'
+import { BiSolidMessageRoundedDetail } from 'react-icons/bi'
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -23,7 +24,7 @@ const Navbar = () => {
                         :
                         <RiMenu5Fill className='hamburguer' onClick={() => setOpen(!open)} />}
                     <Link activeClass="active" to={"contact"} spy={true} smooth={true} offset={-170} duration={900} className="icon-container-message" >
-                        <SiGooglemessages />
+                        <BiSolidMessageRoundedDetail style={{ fontSize: '18px' }} />
                     </Link>
                     {isDark ?
                         <div className='icon-container-light' onClick={toggleTheme}>
