@@ -6,7 +6,7 @@ const CvBtn = () => {
   const { isDark } = useTheme()
 
   return (
-    <a className={isDark ? 'cv-link' : 'cv-link-light'} href="./CV.pdf" download="CV" > <FiDownload className='download-icon' /> Download CV </a>
+    <a className={isDark ? 'cv-link' : 'cv-link-light'} href="./CV.pdf" download="CV" > <FiDownload />Download CV</a>
   )
 }
 

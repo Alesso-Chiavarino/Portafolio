@@ -27,7 +27,8 @@
                 height: fit-content;
             }
 
-            .contact-form, .contact-form-light {
+            .contact-form,
+            .contact-form-light {
                 .btn-submit {
                     margin-top: 35px !important;
                     width: 100%;
@@ -73,7 +74,7 @@
 
 @media screen and (max-width: 992px) {
 
-    //baner
+    //banner
     .banner-container,
     .banner-container-light {
         margin-top: 6.25em !important;
@@ -107,7 +108,6 @@
     .navbar-container,
     .navbar-container-light {
         top: 0 !important;
-        // z-index: 454554;
         width: 100% !important;
         position: fixed !important;
 
@@ -116,7 +116,6 @@
             border-radius: 0 !important;
             width: 100% !important;
             background-color: #1A1B23 !important;
-            // position: fixed;
             margin: 0 !important;
 
             .nav-link-container {
@@ -133,8 +132,6 @@
                 .icon-container-message {
                     display: none;
                 }
-
-                // display: none !important;
             }
         }
     }
@@ -159,10 +156,8 @@
             align-items: center;
 
             .learning-github-btn {
-                // align-self: start;
                 padding: 12px 14px !important;
                 font-size: 16px;
-                // width: 100% !important;
             }
         }
 
@@ -190,17 +185,14 @@
             width: 100%;
         }
 
-        .contact-form, .contact-form-light {
+        .contact-form,
+        .contact-form-light {
 
             input,
             textarea {
                 font-size: 16px !important;
             }
         }
-
-        // .contact-form {
-        //     width: 100%;
-        // }
     }
 
     .projects,
@@ -217,6 +209,19 @@
     body {
         font-size: 12px !important;
     }
+
+    .banner-container {
+        .description-container {
+            width: 70%;
+            font-size: 16px !important;
+
+        }
+
+        .cv-link {
+            padding: 10px 15px;
+        }
+    }
+
 
     .projects,
     .projects-light {
@@ -235,7 +240,9 @@
 
     //form
     .card {
-        .contact-form, .contact-form-light {
+
+        .contact-form,
+        .contact-form-light {
             width: 100%;
         }
     }
