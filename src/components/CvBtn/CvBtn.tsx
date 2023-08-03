@@ -6,7 +6,7 @@ const CvBtn = () => {
   const { isDark } = useTheme()
 
   return (
-    <a className={isDark ? 'cv-link' : 'cv-link-light'} href="./CV.pdf" download="CV" > <FiDownload />Download CV</a>
+    <a className={isDark ? 'cv-link' : 'cv-link-light'} target='_blank' href="https://res.cloudinary.com/dotaebdx8/image/upload/v1691037592/CV_c4eyq8.pdf"> <FiDownload />Download CV</a>
   )
 }
 
