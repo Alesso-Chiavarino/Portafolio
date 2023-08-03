@@ -1,15 +1,12 @@
 .navbar-container {
     display: flex;
-    // position: sticky;
-    // bottom: 0;
     z-index: 455445;
-    // position: fixed;
     position: sticky;
     top: 10px;
-    // width: 100%;
     justify-content: center;
 
     .navbar {
+        user-select: none;
         justify-content: space-between;
         align-items: center;
         display: flex;
@@ -18,11 +15,7 @@
         border-radius: 10px;
         width: 70%;
         background-color: #21232E;
-
-        // margin-top: 1.25em;
-        // margin-bottom: 200px;
         z-index: 1500;
-        // position: relative;
 
         .hamburguer {
             color: #679CFF;

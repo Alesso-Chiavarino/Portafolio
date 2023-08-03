@@ -1,4 +1,5 @@
 .certificate {
+    user-select: none;
     margin: 0 1.875em;
     color: #fff;
     display: flex;
@@ -16,6 +17,7 @@
         width: 3.125em;
         border-radius: 50%;
         outline: 1px solid rgba(255, 255, 255, 0.144);
+        -webkit-user-drag: none;
     }
 
     .certificate-course {

@@ -57,6 +57,8 @@ import axios from 'axios';
 import { generateToast } from "../utils/toast.utils.ts";
 //config
 import { ENV } from "./env.config.ts";
+//types
+import { Technologies, Technology as TechnologyType } from "@/types/Technologies.js";
 
 export {
     //app
@@ -129,4 +131,12 @@ export {
     generateToast,
     //config
     ENV,
-}
+};
+
+export type {
+    //types
+    Technologies,
+    TechnologyType
+};
+
+    

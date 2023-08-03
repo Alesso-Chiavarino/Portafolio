@@ -23,24 +23,24 @@ export const projects = [
             },
         ],
     },
-    {
-        img: "./img/inmobiliaria-baudracco.png",
-        name: "Inmobiliary Web",
-        description: "Web page for a inmobiliary enterprise developed for the Web Development course.",
-        git: "https://github.com/Alesso-Chiavarino/Alesso_Repo",
-        deploy: "https://alesso-chiavarino.github.io/Alesso_Repo/",
-        tech: [
-            {
-                name: "HTML",
-            },
-            {
-                name: "CSS",
-            },
-            {
-                name: "Bootstrap",
-            },
-        ],
-    },
+    // {
+    //     img: "./img/inmobiliaria-baudracco.png",
+    //     name: "Inmobiliary Web",
+    //     description: "Web page for a inmobiliary enterprise developed for the Web Development course.",
+    //     git: "https://github.com/Alesso-Chiavarino/Alesso_Repo",
+    //     deploy: "https://alesso-chiavarino.github.io/Alesso_Repo/",
+    //     tech: [
+    //         {
+    //             name: "HTML",
+    //         },
+    //         {
+    //             name: "CSS",
+    //         },
+    //         {
+    //             name: "Bootstrap",
+    //         },
+    //     ],
+    // },
     {
         img: "./img/cafeteria.png",
         name: "Coffee Web",
@@ -81,7 +81,7 @@ export const projects = [
         ],
     },
     {
-        img: "./img/portafolio.png",
+        img: "./img/portafolio3.png",
         name: "Portfolio",
         description: "Single page developed to tell about me, my experience and show my skills.",
         git: "https://github.com/Alesso-Chiavarino/Portafolio",
@@ -152,7 +152,7 @@ export const projects = [
     {
         img: "./img/outfitx-api.png",
         name: "Outfitx REST API",
-        description: "Ecommerce REST API",
+        description: "Ecommerce REST API, payment gateway with Mercado Pago.",
         git: "https://github.com/Alesso-Chiavarino/Outfitx",
         deploy: "denied",
         tech: [
@@ -167,6 +167,9 @@ export const projects = [
             },
             {
                 name: "Swagger",
+            },
+            {
+                name: "Handlebars",
             },
         ],
     },

@@ -1,4 +1,4 @@
-import { Technologies } from "@/types/Technologies"
+import { Technologies } from "@/config/import.config"
 
 export const frontTechnologies: Technologies = [
     {
@@ -8,6 +8,10 @@ export const frontTechnologies: Technologies = [
     {
         img: "./img/skills/css.svg",
         name: "CSS",
+    },
+    {
+        img: "./img/skills/sass.svg",
+        name: "Sass",
     },
     {
         img: "./img/skills/javascript.svg",

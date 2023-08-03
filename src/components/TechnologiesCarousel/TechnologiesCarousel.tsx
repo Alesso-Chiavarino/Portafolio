@@ -1,7 +1,7 @@
 import { Carousel, Technology } from '../../config/import.config'
 import "react-multi-carousel/lib/styles.css";
 import './TecnologiesCarousel.scss';
-import { Technologies, Technology as TechnolgyType } from '@/types/Technologies';
+import { Technologies, TechnologyType } from '../../config/import.config';
 
 interface TechnologiesCarouselProps {
     frontTechnologies?: Technologies,
@@ -46,7 +46,7 @@ const TechnologiesCarousel = ({ frontTechnologies, backTechnologies }: Technolog
             keyBoardControl={true}
             transitionDuration={500}
         >
-            {frontTechnologies ? frontTechnologies.map(((tec: TechnolgyType, i: number) => {
+            {frontTechnologies ? frontTechnologies.map(((tec: TechnologyType, i: number) => {
                 return <Technology key={i} img={tec.img} name={tec.name} />
             })) : backTechnologies?.map(((tec, i) => {
                 return <Technology key={i} {...tec} />
