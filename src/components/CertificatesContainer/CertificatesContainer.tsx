@@ -25,59 +25,27 @@ const CertificatesContainer = () => {
         }
     };
 
-    const renderMain = () => {
-        if (window.innerWidth < 1000) {
-            return (
-                <Carousel
-                    className={isDark ? 'certificates-slider' : 'certificates-slider-light'}
-                    swipeable={true}
-                    arrows={true}
-                    draggable={true}
-                    showDots={false}
-                    additionalTransfrom={0}
-                    pauseOnHover={true}
-                    rewind={false}
-                    responsive={responsive}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={4000}
-                    keyBoardControl={true}
-                    transitionDuration={500}
-                >
-                    {certificates.map((cert, i) => {
-                        return <Certificate key={i} {...cert} />
-                    })}
-                </Carousel>
-            )
-        } else {
-            return (
-                <Carousel
-                    className={isDark ? 'certificates-slider' : 'certificates-slider-light'}
-                    swipeable={true}
-                    arrows={true}
-                    draggable={true}
-                    showDots={false}
-                    additionalTransfrom={0}
-                    pauseOnHover={true}
-                    rewind={false}
-                    responsive={responsive}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={4000}
-                    keyBoardControl={true}
-                    transitionDuration={500}
-                >
-                    {certificates.map((cert, i) => {
-                        return <Certificate key={i} {...cert} />
-                    })}
-                </Carousel>
-            )
-
-        }
-    }
-
     return (
-        renderMain()
+        <Carousel
+            className={isDark ? 'certificates-slider' : 'certificates-slider-light'}
+            swipeable={true}
+            arrows={true}
+            draggable={true}
+            showDots={false}
+            additionalTransfrom={0}
+            pauseOnHover={true}
+            rewind={false}
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={4000}
+            keyBoardControl={true}
+            transitionDuration={500}
+        >
+            {certificates.map((cert, i) => {
+                return <Certificate key={i} {...cert} />
+            })}
+        </Carousel>
     )
 }
 

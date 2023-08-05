@@ -50,76 +50,6 @@
             }
         }
     }
-
-    .offcanvas-off {
-        position: fixed;
-        transition: all .2s;
-        transform: translateX(100%);
-        z-index: 1200;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 130vh;
-        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1675451796/Things/wave_enjaid.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .offcanvas {
-        position: fixed;
-        transition: all .2s;
-        transform: translate(0);
-        z-index: 1200;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 130vh;
-        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1675451796/Things/wave_enjaid.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        .nav-link-container-off {
-            font-size: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .icons-container-off {
-            width: 50%;
-            z-index: 4545545545;
-            display: flex;
-            flex-direction: column;
-            margin-top: 150px;
-            align-items: center;
-
-            .btn-message {
-                margin-top: 15px;
-                font-family: mark-pro-bold;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.625em;
-                padding: 0.625em;
-                border-radius: 5px;
-                background-color: #679CFF;
-                color: #fff;
-                font-size: 20px;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-
-                &:hover {
-                    background-color: #679cffd0;
-                }
-            }
-
-            .icon-container-message {
-                color: #679CFF !important;
-            }
-        }
-    }
 }
 
 .navbar-container-light {
@@ -150,30 +80,6 @@
 
             &:hover {
                 background-color: #679cffd0;
-            }
-        }
-    }
-
-    .offcanvas-off {
-        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1685372746/Things/wave_light_dyotrn.svg');
-    }
-
-    .offcanvas {
-        background-image: url('https://res.cloudinary.com/dotaebdx8/image/upload/v1685372746/Things/wave_light_dyotrn.svg');
-
-        .icons-container-off {
-
-            .btn-message {
-                background-color: #679CFF;
-                color: #fff;
-
-                &:hover {
-                    background-color: #679cffd0;
-                }
-            }
-
-            .icon-container-message {
-                color: #679CFF !important;
             }
         }
     }

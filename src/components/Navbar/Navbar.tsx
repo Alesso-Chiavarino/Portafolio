@@ -1,6 +1,7 @@
-import { ListContainer, Brand, BsSunFill, BsMoonFill, SiGooglemessages, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config'
+import { ListContainer, Brand, BsSunFill, BsMoonFill, Link, RiMenu5Fill, useState, IoCloseSharp, useTheme } from '../../config/import.config'
 import { BiSolidMessageRoundedDetail } from 'react-icons/bi'
 import './Navbar.scss';
+import Offcanvas from '../Offcanvas/Offcanvas';
 
 const Navbar = () => {
 
@@ -20,9 +21,9 @@ const Navbar = () => {
                 <div className='icons-container'>
                     {open
                         ?
-                        <IoCloseSharp className='hamburguer' onClick={() => setOpen(!open)} />
+                        <IoCloseSharp className='hamburguer' onClick={() => isOpen(!open)} />
                         :
-                        <RiMenu5Fill className='hamburguer' onClick={() => setOpen(!open)} />}
+                        <RiMenu5Fill className='hamburguer' onClick={() => isOpen(!open)} />}
                     <Link activeClass="active" to={"contact"} spy={true} smooth={true} offset={-170} duration={900} className="icon-container-message" >
                         <BiSolidMessageRoundedDetail style={{ fontSize: '18px' }} />
                     </Link>
@@ -36,14 +37,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-            <div className={open ? 'offcanvas' : 'offcanvas-off'}>
-                <div className='icons-container-off'>
-                    <ListContainer linksClass='nav-link-container-off' isOpen={isOpen} />
-                    <Link to={"contact"} spy={true} smooth={true} offset={-170} duration={900} className="btn-message" onClick={() => setOpen(!open)} >Contact me
-                        <SiGooglemessages />
-                    </Link>
-                </div>
-            </div>
+            <Offcanvas isOpen={isOpen} open={open} />
         </div>
     )
 }

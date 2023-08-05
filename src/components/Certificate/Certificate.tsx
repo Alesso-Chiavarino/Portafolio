@@ -24,8 +24,8 @@ const Certificate = ({ img, course, academy, date, description, certificate }: C
             </div>
             <p className='cerficate-description'>{description}</p>
             {academy === "Blas Pascal" ?
-                <a className='certificate-link' href={certificate}> <span><MdWatchLater className='certificate- 
-        icon' /></span> In Process </a>
+                <span className='certificate-link' style={{ cursor: 'not-allowed' }} ><MdWatchLater className='certificate- 
+        icon' />In Process</span>
                 :
                 <a className='certificate-link' target="_blank" href={certificate}> <span><TbFileCertificate className='certificate-icon' /></span> Certificate</a>}
 

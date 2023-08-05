@@ -23,7 +23,6 @@
     .certificate-course {
         font-size: 1.125em;
         font-family: mark-pro-heavy;
-        // font-weight: bold;
     }
 
     .certificate-info {
@@ -35,7 +34,6 @@
         .certificate-info-academy-btn {
             @extend .certificate-info-date-btn;
             font-size: 0.875em !important;
-            // background-color: #3c76e0;
             background-color: #679cff;
             border: 0 !important;
             font-weight: bold;
@@ -45,16 +43,13 @@
             font-size: 0.75rem;
             width: 6.875rem;
             padding: 0.1875rem 0;
-            // height: 30px;
             border-radius: 5px;
-            // padding: 5px 10px;
             border: 1px solid #fff;
         }
     }
 
     .cerficate-description {
         font-size: 0.875em;
-        // font-weight: normal;
     }
 
     .certificate-link {

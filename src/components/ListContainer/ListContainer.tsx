@@ -1,3 +1,4 @@
+import { links } from '@/data/links';
 import { useObserver, Link, useTheme } from '../../config/import.config'
 import './ListContainer.scss';
 
@@ -9,24 +10,6 @@ interface ListContainerProps {
 const ListContainer = ({ linksClass, isOpen }: ListContainerProps) => {
 
     const { isDark } = useTheme()
-
-    const links = [
-        {
-            name: "About me",
-            path: "about",
-            offset: -100,
-        },
-        {
-            name: "Skills",
-            path: "skills",
-            offset: -180,
-        },
-        {
-            name: "Projects",
-            path: "projects",
-            offset: -180,
-        }
-    ]
 
     const { observeAbout, observeSkills, observeProjects } = useObserver()
 
