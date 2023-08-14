@@ -1,24 +1,20 @@
-import { useState, useRef, sendMailsRequest, generateToast } from '../../config/import.config'
+import { useState, useRef, sendMailsRequest, generateToast, HandleEmail, HandleMessage, HandleName, HandleSubmit } from '../../config/import.config'
 
 export const useForm = () => {
 
-    //value forms
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
-    //validations
     const [nameVal, setNameVal] = useState<boolean>(false);
     const [emailVal, setEmailVal] = useState<boolean>(false);
     const [messageVal, setMessageVal] = useState<boolean>(false);
 
-    //regular expressions
     const expressions = {
-        name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+        name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     }
 
-    //refs
     const nameRef = useRef<HTMLSpanElement>(null)
     const emailRef = useRef<HTMLSpanElement>(null)
     const messageRef = useRef<HTMLSpanElement>(null)
@@ -28,7 +24,7 @@ export const useForm = () => {
 
     const [loader, setLoader] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: HandleSubmit) => {
         e.preventDefault();
         let isRequestSuccessful = false;
         try {
@@ -75,7 +71,7 @@ export const useForm = () => {
         }
     }
 
-    const handleName = (e: React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    const handleName = (e: HandleName) => {
         setName(e.currentTarget.value);
         if (expressions.name.test(name)) {
             setNameVal(true);
@@ -86,7 +82,7 @@ export const useForm = () => {
         }
     }
 
-    const handleEmail = (e: React.ChangeEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>) => {
+    const handleEmail = (e: HandleEmail) => {
         setEmail(e.currentTarget.value);
         if (expressions.email.test(email)) {
             setEmailVal(true);
@@ -97,7 +93,7 @@ export const useForm = () => {
         }
     }
 
-    const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement> | React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const handleMessage = (e: HandleMessage) => {
         setMessage(e.currentTarget.value);
         if (message !== "") {
             setMessageVal(true);

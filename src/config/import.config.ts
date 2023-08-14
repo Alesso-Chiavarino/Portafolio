@@ -58,7 +58,8 @@ import { generateToast } from "../utils/toast.utils.ts";
 //config
 import { ENV } from "./env.config.ts";
 //types
-import { Technologies, Technology as TechnologyType } from "@/types/Technologies.js";
+import type { Technologies, Technology as TechnologyType } from "@/types/Technologies.js";
+import type { HandleEmail, HandleMessage, HandleName, HandleSubmit } from "@/types/Form.d.ts";
 
 export {
     //app
@@ -136,6 +137,10 @@ export {
 export type {
     //types
     Technologies,
-    TechnologyType
+    TechnologyType,
+    HandleEmail,
+    HandleMessage,
+    HandleName,
+    HandleSubmit,
 };
 
