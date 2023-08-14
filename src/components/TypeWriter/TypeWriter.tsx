@@ -4,7 +4,7 @@ const TypeWriter = () => {
 
   return (
     <Typewriter
-      words={['Front end Developer', 'Backend Developer', 'Full Stack Developer']}
+      words={['Frontend Developer', 'Backend Developer', 'Full Stack Developer']}
       loop={Infinity}
       cursor
       cursorStyle='|'

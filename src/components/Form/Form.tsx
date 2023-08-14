@@ -1,12 +1,12 @@
-import { RiSendPlaneFill, useTheme, ToastContainer } from '../../config/import.config'
+import { RiSendPlaneFill, useTheme } from '../../config/import.config'
 import './Form.scss';
-import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from './useForm';
+import { Toaster } from 'sonner';
 
 const Form = () => {
 
   const { isDark } = useTheme()
-  
+
   const { email, emailRef, handleEmail, handleMessage, handleName, handleSubmit, inputEmailRef, inputMessageRef, inputNameRef, loader, message, messageRef, name, nameRef } = useForm()
 
   return (
@@ -40,7 +40,7 @@ const Form = () => {
           <button className='btn-submit'> <RiSendPlaneFill /> Submit</button>}
 
       </form>
-      <ToastContainer />
+      <Toaster richColors />
     </>
   )
 

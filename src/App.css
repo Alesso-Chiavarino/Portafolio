@@ -1,3 +1,28 @@
+@font-face {
+    font-family: mark-pro-black;
+    src: url('../src/assets/fonts/MarkPro-Black.otf');
+}
+
+@font-face {
+    font-family: mark-pro-heavy;
+    src: url('../src/assets/fonts/Mark.Pro.Heavy.otf');
+}
+
+@font-face {
+    font-family: mark-pro-bold;
+    src: url('../src/assets/fonts/Mark.Pro.Bold.otf');
+}
+
+@font-face {
+    font-family: mark-pro-regular;
+    src: url('../src/assets/fonts/MarkPro-Regular.otf');
+}
+
+@font-face {
+    font-family: mark-pro-medium;
+    src: url('../src/assets/fonts/MarkPro-Medium.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,27 +56,3 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0.625em;
 }
 
-@font-face {
-    font-family: mark-pro-black;
-    src: url('../src/assets/fonts/MarkPro-Black.otf');
-}
-
-@font-face {
-    font-family: mark-pro-heavy;
-    src: url('../src/assets/fonts/Mark.Pro.Heavy.otf');
-}
-
-@font-face {
-    font-family: mark-pro-bold;
-    src: url('../src/assets/fonts/Mark.Pro.Bold.otf');
-}
-
-@font-face {
-    font-family: mark-pro-regular;
-    src: url('../src/assets/fonts/MarkPro-Regular.otf');
-}
-
-@font-face {
-    font-family: mark-pro-medium;
-    src: url('../src/assets/fonts/MarkPro-Medium.ttf');
-}

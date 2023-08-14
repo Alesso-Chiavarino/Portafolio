@@ -3,14 +3,14 @@ import { useState, useRef, sendMailsRequest, generateToast } from '../../config/
 export const useForm = () => {
 
     //value forms
-    const [name, setName] = useState < string > ('');
-    const [email, setEmail] = useState < string > ('');
-    const [message, setMessage] = useState < string > ('');
+    const [name, setName] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
 
     //validations
-    const [nameVal, setNameVal] = useState < boolean > (false);
-    const [emailVal, setEmailVal] = useState < boolean > (false);
-    const [messageVal, setMessageVal] = useState < boolean > (false);
+    const [nameVal, setNameVal] = useState<boolean>(false);
+    const [emailVal, setEmailVal] = useState<boolean>(false);
+    const [messageVal, setMessageVal] = useState<boolean>(false);
 
     //regular expressions
     const expressions = {
@@ -19,12 +19,12 @@ export const useForm = () => {
     }
 
     //refs
-    const nameRef = useRef < HTMLSpanElement > (null)
-    const emailRef = useRef < HTMLSpanElement > (null)
-    const messageRef = useRef < HTMLSpanElement > (null)
-    const inputNameRef = useRef < HTMLInputElement > (null)
-    const inputEmailRef = useRef < HTMLInputElement > (null)
-    const inputMessageRef = useRef < HTMLTextAreaElement > (null)
+    const nameRef = useRef<HTMLSpanElement>(null)
+    const emailRef = useRef<HTMLSpanElement>(null)
+    const messageRef = useRef<HTMLSpanElement>(null)
+    const inputNameRef = useRef<HTMLInputElement>(null)
+    const inputEmailRef = useRef<HTMLInputElement>(null)
+    const inputMessageRef = useRef<HTMLTextAreaElement>(null)
 
     const [loader, setLoader] = useState(false);
 
@@ -69,7 +69,7 @@ export const useForm = () => {
                 generateToast('success', 'Thanks for your message :)')
 
             } else {
-                generateToast('error', 'We cannot sent your message')
+                generateToast('error', 'We cannot sent your message.')
             }
             setLoader(false);
         }

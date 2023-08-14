@@ -47,10 +47,10 @@ import { backTechnologies, frontTechnologies } from "../data/technologies.ts";
 //react multi carousel
 import Carousel from "react-multi-carousel";
 //api
-import { sendMailsRequest } from "../api/mails/mails.api.ts";
+import { sendMailsRequest } from "../services/mails/mails.api.ts";
+import type { DataType } from "../types/Mails.d.ts";
 //modules
-import { toast } from "react-toastify";
-import { ToastContainer } from 'react-toastify';
+import { toast } from 'sonner'
 import { Typewriter } from 'react-simple-typewriter'
 import axios from 'axios';
 //utils
@@ -121,12 +121,12 @@ export {
     frontTechnologies,
     //modules
     Carousel,
-    ToastContainer,
     Typewriter,
     axios,
     toast,
     //api
     sendMailsRequest,
+    DataType,
     //utils 
     generateToast,
     //config
@@ -139,4 +139,3 @@ export type {
     TechnologyType
 };
 
-    
