@@ -22,6 +22,8 @@ import Contact from "../components/Contact/Contact.tsx";
 import Footer from "../components/Footer/Footer.tsx";
 import Navbar from "../components/Navbar/Navbar.tsx";
 import Projects from "../components/Projects/Projects.tsx";
+import { Experiences } from "../components/Experiences/Experiences.tsx";
+import { Experience } from "@/components/Experience/Experience.tsx";
 import Skills from "../components/Skills/Skills.tsx";
 //context
 import ObserverProvider, { useObserver } from '../context/ObserverContext.tsx';
@@ -32,6 +34,7 @@ import { Link } from 'react-scroll'
 //react icons
 import { LiaCertificateSolid } from 'react-icons/lia'
 import { MdWatchLater } from 'react-icons/md'
+import { MdWork } from 'react-icons/md';
 import { FiDownload } from 'react-icons/fi'
 import { RiSendPlaneFill, RiMenu5Fill } from 'react-icons/ri'
 import { AiFillGithub } from 'react-icons/ai'
@@ -40,10 +43,12 @@ import { SiGmail, SiGooglemessages } from 'react-icons/si'
 import { BsWhatsapp, BsSunFill, BsMoonFill } from 'react-icons/bs'
 import { IoCloseSharp } from 'react-icons/io5'
 import { IoMdRocket } from 'react-icons/io'
+import { HiAcademicCap } from 'react-icons/hi2';
 //data
 import { certificates } from "../data/certificates.ts";
 import { projects } from "../data/projects.ts";
 import { backTechnologies, frontTechnologies } from "../data/technologies.ts";
+import { experiences } from "@/data/experiences.ts";
 //react multi carousel
 import Carousel from "react-multi-carousel";
 //api
@@ -53,6 +58,7 @@ import type { DataType } from "../types/Mails.d.ts";
 import { toast } from 'sonner'
 import { Typewriter } from 'react-simple-typewriter'
 import axios from 'axios';
+import { VerticalTimelineElement, VerticalTimeline } from "react-vertical-timeline-component";
 //utils
 import { generateToast } from "../utils/toast.utils.ts";
 //config
@@ -60,6 +66,7 @@ import { ENV } from "./env.config.ts";
 //types
 import type { Technologies, Technology as TechnologyType } from "@/types/Technologies.js";
 import type { HandleEmail, HandleMessage, HandleName, HandleSubmit } from "@/types/Form.d.ts";
+import { ExperienceType, IExperience } from "@/types/Experiences.ts";
 
 export {
     //app
@@ -84,6 +91,8 @@ export {
     Footer,
     Navbar,
     Projects,
+    Experiences,
+    Experience,
     Skills,
     //context
     useObserver,
@@ -103,6 +112,7 @@ export {
     //react icons
     LiaCertificateSolid,
     MdWatchLater,
+    MdWork,
     FiDownload,
     RiSendPlaneFill,
     RiMenu5Fill,
@@ -115,16 +125,20 @@ export {
     BsMoonFill,
     IoCloseSharp,
     IoMdRocket,
+    HiAcademicCap,
     //data
     certificates,
     projects,
     backTechnologies,
     frontTechnologies,
+    experiences,
     //modules
     Carousel,
     Typewriter,
     axios,
     toast,
+    VerticalTimelineElement,
+    VerticalTimeline,
     //api
     sendMailsRequest,
     DataType,
@@ -132,6 +146,8 @@ export {
     generateToast,
     //config
     ENV,
+    //enums
+    ExperienceType,
 };
 
 export type {
@@ -142,5 +158,6 @@ export type {
     HandleMessage,
     HandleName,
     HandleSubmit,
+    IExperience
 };
 

@@ -1,0 +1,12 @@
+.experiences-section {
+    .vertical-timeline {
+        padding: 0;
+    }
+}
+
+.experiences-section-light {
+    @extend .experiences-section;
+    .section-title {
+        color: #000;
+    }
+}

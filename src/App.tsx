@@ -1,4 +1,4 @@
-import { Banner, CertificatesContainer, Contact, Footer, Navbar, Projects, Skills, ObserverProvider, ThemeProvider, useTheme } from './config/import.config'
+import { Banner, CertificatesContainer, Contact, Footer, Navbar, Projects, Experiences, Skills, ObserverProvider, ThemeProvider, useTheme } from './config/import.config'
 import './App.css';
 import './responsive.scss';
 
@@ -17,6 +17,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <CertificatesContainer />
+      <Experiences />
       <Skills />
       <Projects />
       <Contact />
