@@ -41,8 +41,7 @@
 
         .certificate-info-date-btn {
             font-size: 0.75rem;
-            width: 6.875rem;
-            padding: 0.1875rem 0;
+            padding: 0.4rem 0.4rem;
             border-radius: 5px;
             border: 1px solid #fff;
         }
@@ -68,7 +67,7 @@
             align-items: center;
 
             .certificate-icon {
-                color: "#fff";
+                color: "#fff" !important;
                 margin-right: 2px;
             }
         }

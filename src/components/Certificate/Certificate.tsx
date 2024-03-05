@@ -1,4 +1,4 @@
-import { TbFileCertificate, MdWatchLater, useTheme } from '../../config/import.config.js'
+import { LiaCertificateSolid, MdWatchLater, useTheme } from '../../config/import.config.js'
 import './Certificate.scss';
 
 interface CertificateProps {
@@ -27,7 +27,7 @@ const Certificate = ({ img, course, academy, date, description, certificate }: C
                 <span className='certificate-link' style={{ cursor: 'not-allowed' }} ><MdWatchLater className='certificate- 
         icon' />In Process</span>
                 :
-                <a className='certificate-link' target="_blank" href={certificate}> <span><TbFileCertificate className='certificate-icon' /></span> Certificate</a>}
+                <a className='certificate-link' target="_blank" href={certificate}> <span><LiaCertificateSolid className='certificate-icon' /></span> Certificate</a>}
 
         </article>
     )

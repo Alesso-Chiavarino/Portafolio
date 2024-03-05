@@ -65,6 +65,18 @@ export const backTechnologies: Technologies = [
         name: "Mongo DB"
     },
     {
+        img: "./img/skills/azure.svg",
+        name: "Azure"
+    },
+    {
+        img: "./img/skills/csharp.svg",
+        name: "C#"
+    },
+    {
+        img: "./img/skills/dotnet.svg",
+        name: ".Net"
+    },
+    {
         img: "./img/skills/git.svg",
         name: "Git"
     },

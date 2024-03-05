@@ -30,7 +30,7 @@ import { useInView } from "react-intersection-observer";
 //scroll
 import { Link } from 'react-scroll'
 //react icons
-import { TbFileCertificate } from 'react-icons/tb'
+import { LiaCertificateSolid } from 'react-icons/lia'
 import { MdWatchLater } from 'react-icons/md'
 import { FiDownload } from 'react-icons/fi'
 import { RiSendPlaneFill, RiMenu5Fill } from 'react-icons/ri'
@@ -101,7 +101,7 @@ export {
     //scroll
     Link,
     //react icons
-    TbFileCertificate,
+    LiaCertificateSolid,
     MdWatchLater,
     FiDownload,
     RiSendPlaneFill,
