@@ -4,9 +4,10 @@ import './CvBtn.scss';
 const CvBtn = () => {
 
   const { isDark } = useTheme()
+  const CV_URL = "https://res.cloudinary.com/dotaebdx8/image/upload/CV.pdf";
 
   return (
-    <a className={isDark ? 'cv-link' : 'cv-link-light'} target='_blank' href="https://res.cloudinary.com/dotaebdx8/image/upload/v1697509600/CV_qalupo.pdf"> <FiDownload />Download CV</a>
+    <a className={isDark ? 'cv-link' : 'cv-link-light'} target='_blank' href={CV_URL}> <FiDownload />Download CV</a>
   )
 }
 
